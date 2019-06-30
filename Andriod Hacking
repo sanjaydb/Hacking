@@ -1,0 +1,44 @@
+Reverse Engineering Andriod Apps
+--------------------------------
+{
+    reverse
+    -------
+    {
+      #adb shell pm list packages
+      #adb pull /data/app/san.apk
+      #apktool d san.apk  --> create smali files
+      #grep -rnw '/opt/' -e 'SQL'
+      #ls -la cache.dex
+      #dex2jar cache.dex
+      #jad e cache.jar
+      #jd-gui
+    }
+     
+    sniff url
+    ----------
+    {
+        use burpsuite || paros proxy || fiddler
+        use wireshark, ettercap
+    
+       #sudo bettercap -T 10.10.10.10 -X
+       #sudo bettercap -T 10.10.10.10 --proxy --proxy-https --no-sslstrip
+    }
+     
+    dynamic anaysis
+    ---------------
+    {
+      Cuckoo-Droid
+      
+     
+    }
+    
+    rebuild app
+    -----------
+    {
+      #apktool b -d SAN_code/ san.apk
+      #java -jar san.jarsankey.pem sanpk.pk8 san.apk san1.apk
+      #adb install san1.apk
+     }
+    
+    
+}
