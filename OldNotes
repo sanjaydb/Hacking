@@ -1,0 +1,248 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2014-07-09T10:30:30+05:30
+
+====== Debain Wheezy ======
+Created Wednesday 09 July 2014
+
+syslog
+messages
+cron.log
+auth.log
+daemon.log
+kern.log
+
+debug
+pm-powersave.log
+
+
+apt-get commands
+--------------------
+#apt-get update
+#apt-get upgrade --show-upgraded
+#apt-get -f clean
+#apt-get autoremove
+#apt-get dist-update
+#apt-get update
+#apt-get install sudo
+
+#usermod -a -G sudo <username>
+#reboot
+#apt-get install firmware-linux
+#sudo apt-get install flashplugin-nonfree
+#apt-get install ttf-freefont ttf-mscorefonts-installer ttf-bitstream-vera ttf-dejavu ttf-liberation
+#add-apt-repository ppa:gnome-terminator
+#apt-get update
+#apt-get install terminator
+
+
+
+port data monitering 
+----------------------
+#tcpdump -n tcp dst portrange 1-1023
+
+Capture any packets with destination IP 192.168.1.1 and destination port 23. Display IP addresses and port numbers:
+---------------------------------------------------------------------------------------------------------------------------------
+#tcpdump -n "dst host 192.168.1.1 and dst port 23"					-
+
+
+Capture any packets with destination IP 192.168.1.1 and destination port 80 or 443. Display IP addresses and port numbers:
+-----------------------------------------------------------------------------------------------------------------------------------------
+#tcpdump -n "dst host 192.168.1.1 and (dst port 80 or dst port 443)"
+
+
+Capture either ICMP or ARP packets:
+-----------------------------------------
+#tcpdump -v "icmp or arp"
+
+Capture any packets that are broadcast or multicast:
+---------------------------------------------------------
+#tcpdump -n "broadcast or multicast"
+
+Capture any packets where the destination network is 192.168.1.0/24. Display IP addresses and port numbers:
+--------------------------------------------------------------------------------------------------------------------------
+#tcpdump -n dst net 192.168.1.0/24
+#tcpdump -n src net 192.168.1.0/24
+
+Capture any packets where the destination host is 192.168.1.1. Display IP addresses and port numbers:
+-----------------------------------------------------------------------------------------------------------------
+#tcpdump -n dst host 192.168.1.1
+#tcpdump -n src host 192.168.1.1
+
+
+
+vi Editor
+---------
+:%s/FindMe/ReplaceME/g
+
+
+
+ejabberd
+---------
+Jitsi + Jabber (XMPP) Tutorial 
+
+https://www.youtube.com/watch?v=3NQ8nbP-MPo
+https://library.linode.com/communications/xmpp/ejabberd/debian-5-lenny#sph_install-ejabberd
+#apt-get remove --purge ejabberd
+ #find / -name ejabberd -print
+#ps -ef|grep jabber
+#rm [[/etc/ejabberd/*]]
+#apt-get update
+#apt-get upgrade --show-upgraded
+#apt-get install ejabberd
+#vi  /etc/hosts
+	127.0.0.1    localhost.localdomain   localhost
+	115.96.228.205  trizeus.com trizeus.com
+vi [[/etc/ejabberd/ejabberd.cfg]]
+	%% Admin user
+	{acl, admin, {user, "aquasan21", "trizeus.com"}}.
+	{acl, admin, {user, "admin2", "trizeus.com"}}.
+	
+	{hosts, ["localhost", "trizeus.com"]}.
+	
+	%% enable SSL access for client-to-server (c2s) SSL/TLS connections ,To enable this functionality, uncomment the following stanza.
+			{5223, ejabberd_c2s, [
+			                        {access, c2s},
+			                        {shaper, c2s_shaper},
+			                        {max_stanza_size, 65536},
+			                        tls, {certfile, "/etc/ejabberd/ejabberd.pem"}
+			                        ]},
+		
+		By default, MUCs or Multi-User-Chats (chatrooms) are accessible on the "conference.[hostname]" subdomain. If you want the public to be able to access MUCs on your domain, you need to create an "A Record" pointing the conference hostname (eg. subdomain) to the IP address where the ejabberd instance is running.
+		
+ejabberdctl register sanjaydb trizeus.com $ujay1223
+
+#/etc/init.d/ejabberd start
+#/etc/init.d/ejabberd stop
+#/etc/init.d/ejabberd restart
+#ejabberdctl register man trizeus.com man123 		---> create new user
+#ejabberdctl unregister man trizeus.com		---> remove user
+#ejabberdctl set-password man trizeus.com man231s 		---> set or reset the password
+#ejabberdctl dump ejabberd-backup.db 		---> To back up ejabberd's database dump file located in the "/var/lib/ejabberd/" directory
+#ejabberdctl load ejabberd-backup.db		---> To restore from the backup
+#http://trizeus.com:5280/admin/
+#rm [[/var/lib/ejabberd/*]]
+
+#ejabberdctl register san trizeus.com san1223
+#ejabberdctl register aquasan21 trizeus.com san1223 
+
+Creating SSL keys, CSRs, self-signed certificates, and .pem files.
+----------------------------------------------------------------------
+#openssl genrsa -des3 -out trizeus.com.encrypted.key 1024
+#openssl genrsa -out trizeus.com.key 1024
+#openssl rsa -in trizeus.com.encrypted.key -out trizeus.com.key
+#openssl req -new -key trizeus.com.key -out trizeus.com.csr
+#openssl x509 -req -days 365 -in trizeus.com.csr -signkey trizeus.com.key -out trizeus.com.crt
+#cat trizeus.com.key trizeus.com.crt > trizeus.com.pem
+
+
+
+wifi
+----
+# iwconfig
+#  iwconfig wlan0 txpower 30
+# iwconfig
+# airodump-ng mon0 
+
+#wifite
+
+
+Internet Settings
+Internet Connection	 :  Dynamic IP (DHCP)    	Status : Disconnected
+
+Wireless Settings
+Wireless Network Name (SSID)	 :  TrizeusAp       	Status : Encryption       
+Security	 :  Auto (WPA or WPA2) - Personal
+Network Key	 :  5467da500be7603
+
+Device Info
+User Name	 :   aquasan21
+Password	 :   23acca5a587d844
+
+SSID TrizeusAp
+Networkey : 5467da500be7603
+
+
+
+configure syslog
+-----------------
+http://www.howtoforge.com/centralized-rsyslog-server-monitoring
+
+
+personal user website
+------------------------
+a2enmod userdir
+chgrp -R aquasan21 public_html/
+ sites-available/
+
+quotacheck -vagum
+ touch /home/aquota.user
+  693  touch /home/aquota.group
+  694  chmod 600 /home/aquota.user /home/aquota.group
+modprobe quota_v2
+ echo 'quota_v2' >> /etc/modules
+
+
+Creating a Virtual Network Interface in Debian
+---------------------------------------------------
+nano /etc/network/interfaces
+
+# Add the following
+auto eth0:1
+allow-hotplug eth0:1
+iface eth0:1 inet static
+  address 192.168.1.248
+  netmask 255.255.255.0
+  gateway 192.168.1.254
+
+
+service networking restart
+
+
+diffrent subnet
+----------------
+# Add the following
+auto eth0:1
+allow-hotplug eth0:1
+iface eth0:1 inet static
+  address 10.10.10.7
+  netmask 255.255.255.252
+  gateway 10.10.10.6
+
+route add -net 10.10.10.7 netmask 255.255.255.252 gw 192.168.1.252
+
+
+apache2
+---------
+root@trizeus:/home/aquasan21# cat /etc/hosts
+127.0.0.1       localhost trizeus
+192.168.1.21	san.com san.com
+192.168.1.20	man.com man.com
+115.96.228.205	trizeus.com	trizeus.com
+::1             localhost ip6-localhost ip6-loopback
+fe00::0         ip6-localnet
+ff00::0         ip6-mcastprefix
+ff02::1         ip6-allnodes
+ff02::2         ip6-allrouters
+
+
+a2enmod userdir
+chgrp -R aquasan21 public_html/
+ sites-available/
+
+root@trizeus:/etc/apache2/sites-enabled
+ man.com -> /etc/apache2/sites-available/man.com
+san.com -> /etc/apache2/sites-available/san.com
+
+delete all default files from root@trizeus:/etc/apache2/sites-available
+man.com
+<VirtualHost 192.168.1.20>
+    ServerName www.man.com
+    DocumentRoot /home/www/html/man.com/html
+    ServerAdmin webmaster@man.com
+    ErrorLog /var/log/apache2/www.man.com-error_log
+    CustomLog /var/log/apache2/www.man.com-access_log common
+</VirtualHost>
+
+
+
