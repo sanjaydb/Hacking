@@ -1,0 +1,26 @@
+Sniffer
+-------
+{
+tshark -nr a.pcap -T fields -e frame.number -e ip.src -e ip.dst -e http.authbasic -Y "http.proxy_authorization"
+netsniff-ng --in wlan0 --out test.pcap -H -b 0
+
+dpkg --add-architecture i386 && apt-get update && apt-get install wine32
+
+ apt-get install libmono-system-windows-forms4.0-cil
+ apt-get install libmono-system-web4.0-cil
+ apt-get install libmono-system-net4.0-cil
+ apt-get install libmono-system-runtime-serialization4.0-cil
+ apt-get install libmono-system-xml-linq4.0-cil
+
+ chmod +x NetworkMiner.exe
+ chmod -R go+w AssembledFiles/
+ chmod -R go+w Captures/
+ mono NetworkMiner.exe
+
+
+
+ grabber --spider 1 --sql --xss --url http://14.140.168.33:8090/
+
+captial cloud - > 2020
+
+}
