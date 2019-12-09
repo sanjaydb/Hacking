@@ -1,20 +1,26 @@
 nmap
-
-# nmap -vv -sS T4 -P0 192.0.0.0 -p1-65535
-# nmap -vv -n -sn -PE -T4 --packet-trace 10.10.10.7   //packet Trace 
-# nmap --mtu 16 192.168.8.1
-# nmap -sS -T5 192.168.1.12 --script firewall-bypass
-# nmap -sV -T4 -F 192.168.1.12 --script vuln
-
-# nmap -sF -p22 192.168.0.101   , sN , sX // firewall
-
-
-# nmap --script nmap-vulners -sV 192.168.1.105 -p 21-80
-
+----
+{
+  # nmap -vv -sS T4 -P0 192.0.0.0 -p1-65535
+  # nmap -vv -n -sn -PE -T4 --packet-trace 10.10.10.7   //packet Trace 
+  # nmap --mtu 16 192.168.8.1
+  # nmap -sS -T5 192.168.1.12 --script firewall-bypass
+  # nmap -sV -T4 -F 192.168.1.12 --script vuln
+  # nmap -sF -p22 192.168.0.101   , sN , sX // firewall
+  # nmap --script nmap-vulners -sV 192.168.1.105 -p 21-80
+}
 
 Copy files here
 ----------------
-/usr/share/nmap/scripts/vulscan\*
-git clone https://github.com/scipag/vulscan scipag_vulscan
-ln -s `pwd`/scipag_vulscan /usr/share/nmap/scripts/vulscan
-root@sdb:/home/sanjay/vulScan# nmap --script vulscan,nmap-vulners -sV -Pn 00.000.00.00 -p1-65535
+{
+  /usr/share/nmap/scripts/vulscan\*
+  git clone https://github.com/scipag/vulscan scipag_vulscan
+  ln -s `pwd`/scipag_vulscan /usr/share/nmap/scripts/vulscan
+  root@sdb:/home/sanjay/vulScan# nmap --script vulscan,nmap-vulners -sV -Pn 00.000.00.00 -p1-65535
+}
+
+Testing DOS attack with nmap
+----------------------------
+{
+  nmap -v --script dos 127.0.0.1
+}
