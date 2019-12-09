@@ -12,3 +12,9 @@ nmap
 # nmap --script nmap-vulners -sV 192.168.1.105 -p 21-80
 
 
+Copy files here
+----------------
+/usr/share/nmap/scripts/vulscan\*
+git clone https://github.com/scipag/vulscan scipag_vulscan
+ln -s `pwd`/scipag_vulscan /usr/share/nmap/scripts/vulscan
+root@sdb:/home/sanjay/vulScan# nmap --script vulscan,nmap-vulners -sV -Pn 00.000.00.00 -p1-65535
