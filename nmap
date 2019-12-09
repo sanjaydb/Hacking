@@ -6,3 +6,6 @@ nmap
 # nmap -sS -T5 192.168.1.12 --script firewall-bypass
 # nmap -sV -T4 -F 192.168.1.12 --script vuln
 
+# nmap -sF -p22 192.168.0.101   , sN , sX // firewall
+
+
