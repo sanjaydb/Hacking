@@ -9,3 +9,6 @@ nmap
 # nmap -sF -p22 192.168.0.101   , sN , sX // firewall
 
 
+# nmap --script nmap-vulners -sV 192.168.1.105 -p 21-80
+
+
