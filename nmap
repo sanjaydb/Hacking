@@ -1,3 +1,8 @@
 nmap
 
-#nmap -vv -sS T4 -P0 192.0.0.0 -p1-65535
+# nmap -vv -sS T4 -P0 192.0.0.0 -p1-65535
+# nmap -vv -n -sn -PE -T4 --packet-trace 10.10.10.7   //packet Trace 
+# nmap --mtu 16 192.168.8.1
+# nmap -sS -T5 192.168.1.12 --script firewall-bypass
+# nmap -sV -T4 -F 192.168.1.12 --script vuln
+
