@@ -1,3 +1,6 @@
+
+https://nmap.org/nsedoc/index.html
+
 nmap
 ----
 {
@@ -24,3 +27,121 @@ Testing DOS attack with nmap
 {
   nmap -v --script dos 127.0.0.1
 }
+
+
+SMTP
+----
+nmap --script smtp-commands.nse [--script-args smtp-commands.domain=<domain>] -pT:25,465,587 <host>
+
+DNS Enum
+--------
+nmap --script dns-srv-enum --script-args "dns-srv-enum.domain='example.com'"
+
+ftp-brute
+---------
+nmap --script ftp-brute -p 21 <host>
+
+http-brute
+----------
+nmap --script http-brute -p 80 <host>
+
+http-default-accounts
+---------------------
+nmap -p80 --script http-default-accounts host/ip
+
+http-domino-enum-passwords
+--------------------------
+nmap --script http-domino-enum-passwords -p 80 <host> --script-args http-domino-enum-passwords.username='patrik karlsson',http-domino-enum-passwords.password=secret
+
+http-enum
+---------
+nmap -sV --script=http-enum <target>
+
+http-methods
+------------
+nmap --script http-methods <target>
+nmap --script http-methods --script-args http-methods.url-path='/website' <target>
+
+http-passwd
+-----------
+nmap --script http-passwd --script-args http-passwd.root=/test/ <target>
+
+http-phpmyadmin-dir-traversal
+-----------------------------
+nmap -p80 --script http-phpmyadmin-dir-traversal --script-args="dir='/pma/',file='../../../../../../../../etc/passwd',outfile='passwd.txt'" <host/ip>
+nmap -p80 --script http-phpmyadmin-dir-traversal <host/ip>
+
+http-phpself-xss
+----------------
+nmap --script=http-phpself-xss -p80 <target>
+nmap -sV --script http-self-xss <target>
+
+http-sql-injection
+------------------
+nmap -sV --script=http-sql-injection <target>
+
+
+http-svn-enum
+-------------
+nmap --script http-svn-enum <target>
+
+http-wordpress-enum
+-------------------
+nmap -sV --script http-wordpress-enum <target>
+nmap --script http-wordpress-enum --script-args check-latest=true,search-limit=10 <target>
+nmap --script http-wordpress-enum --script-args type="themes" <target>
+
+http-wordpress-users
+--------------------
+nmap -p80 --script http-wordpress-users <target>
+nmap -sV --script http-wordpress-users --script-args limit=50 <target>
+
+ldap-search
+-----------
+nmap -p 389 --script ldap-search --script-args 'ldap.username="cn=ldaptest,cn=users,dc=cqure,dc=net",ldap.password=ldaptest,
+ldap.qfilter=users,ldap.attrib=sAMAccountName' <host>
+
+nmap -p 389 --script ldap-search --script-args 'ldap.username="cn=ldaptest,cn=users,dc=cqure,dc=net",ldap.password=ldaptest,
+ldap.qfilter=custom,ldap.searchattrib="operatingSystem",ldap.searchvalue="Windows *Server*",ldap.attrib={operatingSystem,whencreated,OperatingSystemServicePack}' <host>
+
+lu-enum
+-------
+nmap --script lu-enum -p 23 <targets>
+nmap --script lu-enum --script-args lulist=lus.txt,
+lu-enum.path="/home/dade/screenshots/" -p 23 -sV <targets>
+
+ms-sql-brute
+------------
+nmap -p 445 --script ms-sql-brute --script-args mssql.instance-all,userdb=customuser.txt,passdb=custompass.txt <host>
+nmap -p 1433 --script ms-sql-brute --script-args userdb=customuser.txt,passdb=custompass.txt <host>
+
+ms-sql-config
+-------------
+nmap -p 1433 --script ms-sql-config --script-args mssql.username=sa,mssql.password=sa <host>
+
+mysql-brute
+-----------
+nmap --script=mysql-brute <target>
+
+oracle-enum-users
+------------------
+nmap --script oracle-enum-users --script-args oracle-enum-users.sid=ORCL,userdb=orausers.txt -p 1521-1560 <host>
+
+pop3-brute
+----------
+nmap -sV --script=pop3-brute <target>
+
+rdp-enum-encryption
+-------------------
+nmap -p 3389 --script rdp-enum-encryption <ip>
+
+rlogin-brute
+-------------
+nmap -p 513 --script rlogin-brute <ip>
+
+smb-brute
+---------
+nmap --script smb-brute.nse -p445 <host>
+sudo nmap -sU -sS --script smb-brute.nse -p U:137,T:139 <host>
+
+
