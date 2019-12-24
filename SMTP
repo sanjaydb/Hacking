@@ -1,0 +1,13 @@
+Hacking SMTP
+-----------
+{
+  # nc -vvv <ip> 25
+  EHLO <mail server internet name>
+  MAIL FROM: <your_name@yourdomain.com>
+  RCPT TO: <recipient@recipientdomain.com>
+  DATA  and press Enter.
+  Subject: <a subject here> and press Enter.
+  This is a test message sent from telnet. and press Enter.
+  . and press Enter
+  The message should be accepted for delivery.
+}
