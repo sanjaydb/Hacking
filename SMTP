@@ -26,5 +26,5 @@ msf
 tools
 -----
 {
-  smtp-user-enum -M VRFY -U /root/Desktop/user.txt -t 192.168.1.107
+  smtp-user-enum -M VRFY -U /usr/share/wordlist/rockyou.txt -t 192.168.1.107
 }
