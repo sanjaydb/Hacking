@@ -17,10 +17,27 @@ dpkg --add-architecture i386 && apt-get update && apt-get install wine32
  chmod -R go+w Captures/
  mono NetworkMiner.exe
 
-
-
  grabber --spider 1 --sql --xss --url http://14.140.168.33:8090/
 
-captial cloud - > 2020
+ captial cloud - > 2020
 
+
+
+ tcpflow -p -c -i eth0 port 80 | grep -oE '(GET|POST|HEAD) .* HTTP/1.[01]|Host: .*'
+
+ httpry -i em1
+
+ ngrep -W byline -qilw 'get' tcp dst port 80  // all data on port 80
+ sudo ngrep -W byline -qilw 'get' tcp dst port 80 \
+  | grep -i " -> \|get\|host"
+  
+ ngrep -W byline -qilwv 'referer' tcp dst port 80 \
+  | grep -i " -> \|get\|host"
+  
+sudo tcpdump -Alfq -s 1024 \
+  'tcp dst port 80 and ip[2:2] > 40 and tcp[tcpflags] & tcp-push != 0' \
+  | grep -i " > \|get\|host"
+  
+  
+  
 }
