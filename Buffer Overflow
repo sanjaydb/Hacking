@@ -1,3 +1,7 @@
+
+http://www-inst.eecs.berkeley.edu/~cs161/fa08/papers/stack_smashing.pdf
+
+
 disable memory randomization, enable core dumps
 ------------------------------------------------
 {
