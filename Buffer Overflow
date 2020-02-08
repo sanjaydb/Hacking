@@ -1,0 +1,19 @@
+disable memory randomization, enable core dumps
+------------------------------------------------
+{
+  cat /proc/sys/kernel/randomize_va_space
+  sudo bash -c 'echo "kernel.randomize_va_space = 0" >> /etc/sysctl.conf'
+  sudo sysctl -p
+  cat /proc/sys/kernel/randomize_va_space
+  # verify "0"
+  ulimit -c unlimited
+  ulimit -c
+  # verify "unlimited"
+}
+
+Compiling Code 
+--------------
+{
+  # compile the code
+gcc -z execstack -fno-stack-protector -mpreferred-stack-boundary=3 -g app.c -o app
+}
