@@ -1,0 +1,42 @@
+
+/etc/passwd file store essentail user account informtion
+Its a Plain text.
+Contain all users on the system
+It is a readoly file, as many application use its user id for logon etc.
+
+File Format :
+all fields are seprated by ":" Total 7 Fields .
+
+1. Username : limites to 32 char 
+2. password x indicate encrypted password stored in /etc/shadow. password encrypted withn DEC algorithm
+3. User Id called as UID : Its 32 bit Intger value,  Its has a range e.g. 0 is for root account , 1-99 reserved for 
+   predefine accounts.   less than 500 i.e 333 etc is assigned for bin, lp, mail, news games, ftp services etc. 
+   regular users start from 500.You can use your own UID, however never reuse deleted UID, incase if you use deleted UID
+   assigned to new user, in case of backup all the deleted UID files will access to the UID user.
+4. group id : its 32 bit integer , its a primary group id /etc/group , you can assigne user in to a perticular group, if groups are not there,
+   then that will be a tediuos job, giving right to all users.When a new user is created it becomes a defualt group or primary 
+   group, and when assigned to a new group then its become secondary group. This ID can be used to track moniter the activity of
+   the group.
+   
+5. user id info : info about the user , cell no etc.
+6. home directory : absolute path to the dir.it go directly there when logs in.
+7. command shell : path of the command shell. /bin/bash etc.
+
+
+
+
+
+Linux Hash Craking
+------------------
+{
+  ls /etc/passwd
+  ls /etc/shadow
+  cat /etc/passwd > password.tx
+  sudo cat /etc/shadow > sha.txt
+  sdiff new.txt password.txt
+  john new.txt 
+  john -show new.txt
+  grep sanjay new.txt
+}
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
