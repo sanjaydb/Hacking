@@ -1,0 +1,98 @@
+Cyber Security Frame Work According to RBI 
+Fd 7b 0b 19 74 82 7e 74 a8 b3 01 d9 da d7 3c 08
+
+    1. Arrangement for continuous surveillance 
+        a. SOC Services
+        b. Regular & Continues Surveillance real time
+        c. Cyber Threat alerts services real time 
+    2. IT architecture should be conducive to security
+        a. Adding of new Technologies / services
+        b. Doing Network Security Architecture Review regularly
+        c. Maintaining Record for the Network Architecture Review
+    3. Comprehensively address network and database security
+        a. Vulnerability Assessment of the servers
+        b. Web Application Security For the app
+        c. Database Vulnerability assessment
+        d. OS vulnerability Assessment regularly
+    4. Ensuring Protection of customer information
+        a. Ensuring network encryption
+        b. Database data Encryption
+        c. Performing Penetration testing regularly 
+        d. Network Penetration testing regularly
+        e. Performing DDOS attack regularly 
+    5. Cyber Crisis Management Plan
+        a. Technical Audit for BCP DR validation 
+        b. Incident management Response log trail 
+        c. Network Forensics Investigation Audit Test audit report 
+        d. Audit report for IDS and IPS
+        e. Audit Report for following test
+            i. Distributed Denial of Services (DDoS), 
+            ii. Ransom-ware / Crypto ware,
+            iii. Destructive malware, 
+            iv. Phishing related Frauds
+            v. Drive-by downloads, etc.
+    6. Cyber security preparedness indicators
+        a. Assessment and measurement of Application, Network through development of indicators to assess the level of risk/preparedness. (employees can be part of this assessment)
+    7. Sharing of information on cyber-security incidents with RBI
+        a. Sharing of incident related to cyber-attack and best practices to Reserve Bank.
+        b. Reporting of all unusual cybersecurity incidents (whether they were successful or were attempts which did not fructify) to the Reserve Bank.
+        c. Actively participating in activity of IB-CART.
+    8. Supervisory Reporting framework
+        a. Maintaining and monitoring the summary level information as well as details on information security incidents including cyber-incidents in form of dash board Annex-3
+    9. An immediate assessment of gaps in preparedness to be reported to RBI
+        a. The material gaps in controls may be identified early and appropriate remedial action under the active guidance and oversight of the IT Sub Committee of the Board as well as by the Board may be initiated immediately
+        b. Report to CSITE for gap, assessment etc.
+    10. Organisational arrangements
+        a. Escalation matrix need to be set, for review of Audit reports and action taken
+    11. Cyber-security awareness among stakeholders / Top Management / Board
+        a. Awareness of cyber security to team and stakeholders
+
+
+Baseline Cyber Security and Resilience Requirements
+    • Technology adoption & Potential threat
+        ◦ New Hardware requirement report
+    • Role of IT Sub-committee may be review
+        ◦ Sub Committee Members List
+        ◦ Review Report of the Audit reports (internal)
+    • Board level involvement 
+        ◦ Board member list
+        ◦ Approval of Hardware / software Report
+    • Log monitoring system
+        ◦ Log Monitoring Report
+        ◦ Vulnerability fixation report if any
+    • Incident management system 
+        ◦ Incident management Reports
+    • Zero days Alerts Managements System
+        ◦ Zero days alters, WhatsApp, Mail etc.
+    • Hardware devices Configuration Report
+        ◦ Secure Architecture Report
+    • Training and Awareness 
+        ◦ Report for training 
+        ◦ Report for awareness (Random security survey)
+Baseline Controls
+    1. Inventory Management of Business IT Assets
+        a. Inventory Assets Reports
+        b. Classification of data
+        c. 
+    2. Classification of Data
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
