@@ -1,0 +1,10 @@
+
+1.supply chain vulnerabilities, 
+2.shared tenancy vulnerabilities, 
+3.poor access controls, 
+4.misconfigurations.
+
+Use cloud service policies to ensure resources default as private
+Audit access logs with automated tools to identify overly-exposed data;
+Restrict sensitive data to approved storage and use Data Loss Prevention (DLP) solutions to enforce these restrictions.
+
