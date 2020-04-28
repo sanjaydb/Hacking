@@ -97,3 +97,26 @@ Policy Procedure and awerness  :
       }
       
       
+Google Cloud  Security
+      --------------
+      {
+        Global LB : anycast IP DDOS protection 
+        TLS every where : Application encryption 
+        Cloud Armor : Application Based controls
+        IAP : Identity based control 
+
+        VPC service controls : Secure your sensitive data, 
+                              lock data within a trusted perimiter
+        VPC level firewall : Secure your VPC boundaries 
+        Outbound NAT proxy : Egress internet access without public IP
+        VPN and interconnect : Private access to on-PROCESS_INFORMATION
+        Private Trizeus Acess : Private Access to GCS , BiqQuery, SQL Redis
+        Private GKE, VMs : Private deploymt no pblic IP.
+
+        IAM : ApI based accessed
+        Ista Security based : micro - segment based on HTTP/S ID
+        Firewall per service account : Micro-segment for VM based applications
+        GKE network polices : Micro segment with GKE clusters
+      }
+            
+      
