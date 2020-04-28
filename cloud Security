@@ -8,3 +8,92 @@ Use cloud service policies to ensure resources default as private
 Audit access logs with automated tools to identify overly-exposed data;
 Restrict sensitive data to approved storage and use Data Loss Prevention (DLP) solutions to enforce these restrictions.
 
+Cloud Security Checklist
+------------------------
+1. Set password policies
+2. Make multi-factor authentication mandatory
+3.Manage SaaS access and permissions
+4. Enable anti-phishing protections
+5. Turn on unintended external reply warning
+6. Set external sharing standards
+7. Set up message encryption
+8. Set up data loss prevention policies
+9. Enable mobile management
+10. Run a security health/score audit
+
+
+Defence in depth 
+-----------------
+outer side to internal side 
+
+1. Advance Threat Protection ( ATP)
+e.g. Fireeye, Cisco/iron port 
+
+2. Intrudtion Detetcion Prevention (IDS/IPS)
+e.g.  SourceFire Macafe
+
+3. Web Security 
+  Imperva, Fortinet 
+  
+4. Email Security 
+Bluecoat , trustware
+
+5. Foresics Anlaysis
+RSA NetWitness , Solera 
+
+6. Data Lose Prevention
+WebSense , Trenmicro
+
+7. Network Genration Firewall.
+Palo Alto Network, Checkpoint
+
+8. Security Event monitering ( SEMI)
+HP Arc Sight, IBM/Q1Labs
+
+
+
+Web application
+----------------
+data : 
+      {
+        Database Security (online storage and Bakups)
+        Content Sceurity, Information Rights Managments 
+        Message level security 
+      }
+Application :      
+      {
+        Faderation (SSO, Identity Prpogation, Trust)
+        Autentcation, Autorization, Auditing (AAA)
+        Security Assurance (Codeing Pratice)
+      }
+Host :
+      {
+        Platorm OS , VA. Patch Management
+        Desktop malware protection
+      }
+Internal Network :
+      {   
+        Transport Layer Security ( encrtyption, identity)
+        Firewall, network address transation, Denial of services, Prevention
+        Messages parsing and valdation.
+      }
+      
+Perimter :
+      {   
+        Transport Layer Security ( encrtyption, identity)
+        Firewall, network address transation, Denial of services, Prevention
+        Messages parsing and valdation.
+      }
+
+Physical :
+      {
+        Fences, wall, guards, locks, keys, badgets
+
+      } 
+Policy Procedure and awerness  :
+      {
+        Data Clasicafication , Password policy , Code review
+        ISO standard , checklist
+      }
+      
+      
