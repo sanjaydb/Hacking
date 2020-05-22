@@ -1,0 +1,1834 @@
+C
+
+Error number	Error Code	Error Description
+1	EPERM	Operation not permitted
+2	ENOENT	No such file or directory
+3	ESRCH	No such process
+4	EINTR	Interrupted system call
+5	EIO	I/O error
+6	ENXIO	No such device or address
+7	E2BIG	Argument list too long
+8	ENOEXEC	Exec format error
+9	EBADF	Bad file number
+10	ECHILD	No child processes
+11	EAGAIN	Try again
+12	ENOMEM	Out of memory
+13	EACCES	Permission denied
+14	EFAULT	Bad address
+15	ENOTBLK	Block device required
+16	EBUSY	Device or resource busy
+17	EEXIST	File exists
+18	EXDEV	Cross-device link
+19	ENODEV	No such device
+20	ENOTDIR	Not a directory
+21	EISDIR	Is a directory
+22	EINVAL	Invalid argument
+23	ENFILE	File table overflow
+24	EMFILE	Too many open files
+25	ENOTTY	Not a typewriter
+26	ETXTBSY	Text file busy
+27	EFBIG	File too large
+28	ENOSPC	No space left on device
+29	ESPIPE	Illegal seek
+30	EROFS	Read-only file system
+31	EMLINK	Too many links
+32	EPIPE	Broken pipe
+33	EDOM	Math argument out of domain of func
+34	ERANGE	Math result not representable
+35	EDEADLK	Resource deadlock would occur
+36	ENAMETOOLONG	File name too long
+37	ENOLCK	No record locks available
+38	ENOSYS	Function not implemented
+39	ENOTEMPTY	Directory not empty
+40	ELOOP	Too many symbolic links encountered
+42	ENOMSG	No message of desired type
+43	EIDRM	Identifier removed
+44	ECHRNG	Channel number out of range
+45	EL2NSYNC	Level 2 not synchronized
+46	EL3HLT	Level 3 halted
+47	EL3RST	Level 3 reset
+48	ELNRNG	Link number out of range
+49	EUNATCH	Protocol driver not attached
+50	ENOCSI	No CSI structure available
+51	EL2HLT	Level 2 halted
+52	EBADE	Invalid exchange
+53	EBADR	Invalid request descriptor
+54	EXFULL	Exchange full
+55	ENOANO	No anode
+56	EBADRQC	Invalid request code
+57	EBADSLT	Invalid slot
+59	EBFONT	Bad font file format
+60	ENOSTR	Device not a stream
+61	ENODATA	No data available
+62	ETIME	Timer expired
+63	ENOSR	Out of streams resources
+64	ENONET	Machine is not on the network
+65	ENOPKG	Package not installed
+66	EREMOTE	Object is remote
+67	ENOLINK	Link has been severed
+68	EADV	Advertise error
+69	ESRMNT	Srmount error
+70	ECOMM	Communication error on send
+71	EPROTO	Protocol error
+72	EMULTIHOP	Multihop attempted
+73	EDOTDOT	RFS specific error
+74	EBADMSG	Not a data message
+75	EOVERFLOW	Value too large for defined data type
+76	ENOTUNIQ	Name not unique on network
+77	EBADFD	File descriptor in bad state
+78	EREMCHG	Remote address changed
+79	ELIBACC	Can not access a needed shared library
+80	ELIBBAD	Accessing a corrupted shared library
+81	ELIBSCN	.lib section in a.out corrupted
+82	ELIBMAX	Attempting to link in too many shared libraries
+83	ELIBEXEC	Cannot exec a shared library directly
+84	EILSEQ	Illegal byte sequence
+85	ERESTART	Interrupted system call should be restarted
+86	ESTRPIPE	Streams pipe error
+87	EUSERS	Too many users
+88	ENOTSOCK	Socket operation on non-socket
+89	EDESTADDRREQ	Destination address required
+90	EMSGSIZE	Message too long
+91	EPROTOTYPE	Protocol wrong type for socket
+92	ENOPROTOOPT	Protocol not available
+93	EPROTONOSUPPORT	Protocol not supported
+94	ESOCKTNOSUPPORT	Socket type not supported
+95	EOPNOTSUPP	Operation not supported on transport endpoint
+96	EPFNOSUPPORT	Protocol family not supported
+97	EAFNOSUPPORT	Address family not supported by protocol
+98	EADDRINUSE	Address already in use
+99	EADDRNOTAVAIL	Cannot assign requested address
+100	ENETDOWN	Network is down
+101	ENETUNREACH	Network is unreachable
+102	ENETRESET	Network dropped connection because of reset
+103	ECONNABORTED	Software caused connection abort
+104	ECONNRESET	Connection reset by peer
+105	ENOBUFS	No buffer space available
+106	EISCONN	Transport endpoint is already connected
+107	ENOTCONN	Transport endpoint is not connected
+108	ESHUTDOWN	Cannot send after transport endpoint shutdown
+109	ETOOMANYREFS	Too many references: cannot splice
+110	ETIMEDOUT	Connection timed out
+111	ECONNREFUSED	Connection refused
+112	EHOSTDOWN	Host is down
+113	EHOSTUNREACH	No route to host
+114	EALREADY	Operation already in progress
+115	EINPROGRESS	Operation now in progress
+116	ESTALE	Stale NFS file handle
+117	EUCLEAN	Structure needs cleaning
+118	ENOTNAM	Not a XENIX named type file
+119	ENAVAIL	No XENIX semaphores available
+120	EISNAM	Is a named type file
+121	EREMOTEIO	Remote I/O error
+122	EDQUOT	Quota exceeded
+123	ENOMEDIUM	No medium found
+124	EMEDIUMTYPE	Wrong medium type
+125	ECANCELED	Operation Canceled
+126	ENOKEY	Required key not available
+127	EKEYEXPIRED	Key has expired
+128	EKEYREVOKED	Key has been revoked
+129	EKEYREJECTED	Key was rejected by service
+130	EOWNERDEAD	Owner died
+131	ENOTRECOVERABLE	State not recoverable
+
+Apache
+Successful Client Requests
+200	OK
+201	Created
+202	Accepted
+203	Non-Authorative Information
+204	No Content
+205	Reset Content
+206	Partial Content
+Client Request Redirected
+300	Multiple Choices
+301	Moved Permanently
+302	Moved Temporarily
+303	See Other
+304	Not Modified
+305	Use Proxy
+Client Request Errors
+400	Bad Request
+401	Authorization Required
+402	Payment Required (not used yet)
+403	Forbidden
+404	Not Found
+405	Method Not Allowed
+406	Not Acceptable (encoding)
+407	Proxy Authentication Required
+408	Request Timed Out
+409	Conflicting Request
+410	Gone
+411	Content Length Required
+412	Precondition Failed
+413	Request Entity Too Long
+414	Request URI Too Long
+415	Unsupported Media Type
+Server Errors
+500	Internal Server Error
+501	Not Implemented
+502	Bad Gateway
+503	Service Unavailable
+504	Gateway Timeout
+505	HTTP Version Not Supported
+
+SMTP
+CODE
+MEANING
+HOW TO SOLVE IT / WHAT TO DO
+
+
+
+101
+The server is unable to connect.
+Try to change the server's name (maybe it was spelt incorrectly) or the connection port.
+111
+Connection refused or inability to open an SMTP stream.
+This error normally refers to a connection issue with the remote SMTP server, depending on firewalls or misspelled domains. Double-check all the configurations and in case ask your provider.
+
+
+
+211
+System status message or help reply.
+It comes with more information about the server.
+214
+A response to the HELP command.
+It contains information about your particular server, normally pointing to a FAQ page.
+220
+The server is ready.
+It's just a welcome message. Just read it and be happy that everything is working (so far)!
+221
+The server is closing its transmission channel. It can come with side messages like "Goodbye" or "Closing connection".
+The mailing session is going to end, which simply means that all messages have been processed.
+250
+Its typical side message is "Requested mail action okay completed": meaning that the server has transmitted a message.
+The oppsite of an error: everything has worked and your email has been delivered.
+251
+"User not local will forward": the recipient's account is not on the present server, so it will be relayed to another.
+It's a normal transfer action. For other information check out our article on what is an SMTP server.
+252
+The server cannot verify the user, but it will try to deliver the message anyway.
+The recipient's email account is valid, but not verifiable. Normally the server relays the message to another one that will be able to check it.
+
+
+
+354
+The side message can be very cryptic ("Start mail input end <CRLF>.<CRLF>"). It's the typical response to the DATA command.
+The server has received the "From" and "To" details of the email, and is ready to get the body message.
+
+
+
+420
+"Timeout connection problem": there have been issues during the message transfer.
+This error message is produced only by GroupWise servers. Either your email has been blocked by the recipient's firewall, or there's a hardware problem. Check with your provider.
+421
+The service is unavailable due to a connection problem: it may refer to an exceeded limit of simultaneous connections, or a more general temporary problem.
+The server (yours or the recipient's) is not available at the moment, so the dispatch will be tried again later.
+422
+The recipient's mailbox has exceeded its storage limit.
+Best is to contact contact the user via another channel to alert him and ask to create some free room in his mailbox.
+431
+Not enough space on the disk, or an "out of memory" condition due to a file overload.
+This error may depend on too many messages sent to a particular domain. You should try again sending smaller sets of emails instead of one big mail-out.
+432
+Typical side-message: "The recipient's Exchange Server incoming mail queue has been stopped".
+It's a Microsoft Exchange Server's SMTP error code. You should contact it to get more information: generally it's due to a connection problem.
+441
+The recipient's server is not responding.
+There's an issue with the user's incoming server: yours will try again to contact it.
+442
+The connection was dropped during the transmission.
+A typical network connection problem, probably due to your router: check it immediately.
+446
+The maximum hop count was exceeded for the message: an internal loop has occurred.
+Ask your SMTP provider to verify what has happened.
+447
+Your outgoing message timed out because of issues concerning the incoming server.
+This happens generally when you exceeded your server's limit of number of recipients for a message. Try to send it again segmenting the list in different parts.
+449
+A routing error.
+Like error 432, it's related only to Microsoft Exchange. Use WinRoute.
+450
+"Requested action not taken – The user's mailbox is unavailable". The mailbox has been corrupted or placed on an offline server, or your email hasn't been accepted for IP problems or blacklisting.
+The server will retry to mail the message again, after some time. Anyway, verify that is working on a reliable IP address.
+451
+"Requested action aborted – Local error in processing". Your ISP's server or the server that got a first relay from yours has encountered a connection problem.
+It's normally a transient error due to a message overload, but it can refer also to a rejection due to a remote antispam filter. If it keeps repeating, ask your SMTP provider to check the situation. (If you're sending a large bulk email with a free one that can be a common issue).
+452
+Too many emails sent or too many recipients: more in general, a server storage limit exceeded.
+Again, the typical cause is a message overload. Usually the next try will succeed: in case of problems on your server it will come with a side-message like "Out of memory".
+471
+An error of your mail server, often due to an issue of the local anti-spam filter.
+Contact your SMTP service provider to fix the situation.
+
+
+
+500
+A syntax error: the server couldn't recognize the command.
+It may be caused by a bad interaction of the server with your firewall or antivirus. Read carefully their instructions to solve it.
+501
+Another syntax error, not in the command but in its parameters or arguments.
+In the majority of the times it's due to an invalid email address, but it can also be associated with connection problems (and again, an issue concerning your antivirus settings).
+502
+The command is not implemented.
+The command has not been activated yet on your own server. Contact your provider to know more about it.
+503
+The server has encountered a bad sequence of commands, or it requires an authentication.
+In case of "bad sequence", the server has pulled off its commands in a wrong order, usually because of a broken connection. If an authentication is needed, you should enter your username and password.
+504
+A command parameter is not implemented.
+Like error 501, is a syntax problem; you should ask your provider.
+510/511
+Bad email address.
+One of the addresses in your TO, CC or BBC line doesn't exist. Check again your recipients' accounts and correct any possible misspelling.
+512
+A DNS error: the host server for the recipient's domain name cannot be found.
+Check again all your recipients' addresses: there will likely be an error in a domain name (like mail@domain.coom instead of mail@domain.com).
+513
+"Address type is incorrect": another problem concerning address misspelling. In few cases, however, it's related to an authentication issue.
+Doublecheck your recipients' addresses and correct any mistake. If everything's ok and the error persists, then it's caused by a configuration issue (simply, the server needs an authentication).
+523
+The total size of your mailing exceeds the recipient server's limits.
+Re-send your message splitting the list in smaller subsets.
+530
+Normally, an authentication problem. But sometimes it's about the recipient's server blacklisting yours, or an invalid email address.
+Configure your settings providing a username+password authentication. If the error persists, check all your recipients' addresses and if you've been blacklisted.
+541
+The recipient address rejected your message: normally, it's an error caused by an anti-spam filter.
+Your message has been detected and labeled as spam. You must ask the recipient to whitelist you.
+550
+It usually defines a non-existent email address on the remote side.
+Though it can be returned also by the recipient's firewall (or when the incoming server is down), the great majority of errors 550 simply tell that the recipient email address doesn't exist. You should contact the recipient otherwise and get the right address.
+551
+"User not local or invalid address – Relay denied". Meaning, if both your address and the recipient's are not locally hosted by the server, a relay can be interrupted.
+It's a (not very clever) strategy to prevent spamming. You should contact your ISP and ask them to allow you as a certified sender. Of course, with a professional SMTP provider like turboSMTP you won't ever deal with this issue.
+552
+"Requested mail actions aborted – Exceeded storage allocation": simply put, the recipient's mailbox has exceeded its limits.
+Try to send a lighter message: that usually happens when you dispatch emails with big attachments, so check them first.
+553
+"Requested action not taken – Mailbox name invalid". That is, there's an incorrect email address into the recipients line.
+Check all the addresses in the TO, CC and BCC field. There should be an error or a misspelling somewhere.
+554
+This means that the transaction has failed. It's a permanent error and the server will not try to send the message again.
+The incoming server thinks that your email is spam, or your IP has been blacklisted. Check carefully if you ended up in some spam lists, or rely on a professional SMTP service like turboSMTP that will nullify this problem.
+
+
+
+Error code list for failed FTP and HTTP remote webserver log transfers
+
+Error Code List
+
+1     Unsupported protocol. This build  of  curl  has  no
+      support for this protocol.
+
+2     Failed to initialize.
+
+3     URL malformat. The syntax was not correct.
+
+4     URL  user  malformatted.  The  user-part of the URL
+      syntax was not correct.
+
+5     Couldn't resolve proxy. The given proxy host  could
+      not be resolved.
+
+6     Couldn't  resolve  host.  The given remote host was
+      not resolved.
+
+7     Failed to connect to host.
+
+8     FTP weird server reply. The server sent  data  curl
+      couldn't parse.
+
+9     FTP access denied. The server denied login.
+
+10    FTP  user/password  incorrect.  Either  one or both
+      were not accepted by the server.
+
+11    FTP weird PASS reply. Curl couldn't parse the reply
+      sent to the PASS request.
+
+12    FTP weird USER reply. Curl couldn't parse the reply
+      sent to the USER request.
+
+13    FTP weird PASV reply, Curl couldn't parse the reply
+      sent to the PASV request.
+
+14    FTP  weird  227  format.  Curl  couldn't  parse the
+      227-line the server sent.
+
+15    FTP can't get host. Couldn't resolve the host IP we
+      got in the 227-line.
+
+16    FTP  can't  reconnect. Couldn't connect to the host
+      we got in the 227-line.
+
+17    FTP couldn't set binary. Couldn't  change  transfer
+      method to binary.
+
+18    Partial  file.  Only  a part of the file was trans-
+      fered.
+
+19    FTP couldn't download/access the  given  file,  the
+      RETR (or similar) command failed.
+
+20    FTP  write  error. The transfer was reported bad by
+      the server.
+
+21    FTP quote error. A  quote  command  returned  error
+      from the server.
+
+22    HTTP  not  found. The requested page was not found.
+      This return code only appears if --fail is used.
+
+23    Write error. Curl couldn't write data  to  a  local
+      filesystem or similar.
+
+24    Malformat user. User name badly specified.
+
+25    FTP  couldn't STOR file. The server denied the STOR
+      operation.
+
+26    Read error. Various reading problems.
+
+27    Out of memory. A memory allocation request  failed.
+
+28    Operation  timeout.  The  specified time-out period
+      was reached according to the conditions.
+
+29    FTP couldn't set  ASCII.  The  server  returned  an
+      unknown reply.
+
+30    FTP PORT failed. The PORT command failed.
+
+31    FTP couldn't use REST. The REST command failed.
+
+32    FTP couldn't use SIZE. The SIZE command failed. The
+      command is an extension to the  original  FTP  spec
+      RFC 959.
+
+33    HTTP  range error. The range "command" didn't work.
+
+34    HTTP post error. Internal  post-request  generation
+      error.
+
+35    SSL connect error. The SSL handshaking failed.
+
+36    FTP  bad download resume. Couldn't continue an ear-
+      lier aborted download.
+
+37    FILE couldn't read file. Failed to open  the  file.
+      Permissions?
+
+38    LDAP cannot bind. LDAP bind operation failed.
+
+39    LDAP search failed.
+
+40    Library  not found. The LDAP library was not found.
+
+41    Function not found. A required  LDAP  function  was
+      not found.
+
+42    Aborted  by  callback.  An application told curl to
+      abort the operation.
+
+43    Internal error. A function was called  with  a  bad
+      parameter.
+
+44    Internal  error.  A  function  was  called in a bad
+      order.
+
+45    Interface error.  A  specified  outgoing  interface
+      could not be used.
+
+46    Bad  password  entered.  An error was signaled when
+      the password was entered.
+
+47    Too many redirects. When following redirects,  curl
+      hit the maximum amount.
+
+48    Unknown TELNET option specified.
+
+49    Malformed telnet option.
+
+51    The remote peer's SSL certificate wasn't ok
+
+52    The  server  didn't  reply  anything, which here is
+      considered an error.
+
+53    SSL crypto engine not found
+
+54    Cannot set SSL crypto engine as default
+
+55    Failed sending network data
+
+56    Failure in receiving network data
+
+57    Share is in use (internal error)
+
+58    Problem with the local certificate
+
+59    Couldn't use specified SSL cipher
+
+60    Problem with the CA cert (path? permission?)
+
+61    Unrecognized transfer encoding
+
+
+
+
+Table 1. UNIX TCP/IP error numbers
+errnos	AIX® error number	HP-UX error number	Solaris error number	Linux error number	Description
+EINTR	4	4	4	4	The function specified was interrupted by a signal.
+EBADF	9	9	9	9	Bad socket. The socket might have been corrupted.
+EAGAIN	11	11	11	11	Resource temporarily unavailable.
+EFAULT	14	14	14	14	Bad address.
+On connect, bad address.
+
+On receive, the data was directed to be received into a nonexistent or protected part of the process address space. The buffer is not valid.
+
+EBUSY	16	16	16	16	Resource busy.
+EINVAL	22	22	22	22	Invalid argument that is passed to the specified function or the socket is closed. The EINVAL error can be returned if there was a memory overwrite, or buffer overflow problem.
+ENFILE	23	23	23	23	Too many open files in the system.
+EMFILE	24	24	24	24	The per-process file descriptor table is full. Number of file descriptors/sockets for the process is exceeded.
+ENOSPC	28	28	28	28	No space is left on a device or system table.
+EPIPE	32	32	32	32	Broken pipe.
+EWOULDBLOCK	54	246	11	11	On the connect function, the range that is allocated for TCP/UDP ephemeral ports is exhausted. (Some operating systems return the same error as EAGAIN.)
+ENOTSOCK	57	216	95	88	Socket operation on a non-socket.
+ENOPROTOOPT	61	220	99	92	Option is unknown.
+EADDRINUSE	67	226	125	98	The specified address is already in use. Perhaps the previous process that established the connection was terminated abnormally or was not cleaned up properly.
+EADDRNOTAVAIL	68	227	126	99	The specified host name or IP address is not available from the local system.
+ENETDOWN	69	228	127	100	The network is down.
+ENETUNREACH	70	229	128	101	No route to the network or host is available.
+ENETRESET	71	230	129	102	The network dropped the connection on reset.
+ECONNRESET	73	232	131	104	Connection was reset by the partner.
+ENOBUFS	74	233	132	105	Insufficient memory or resources were available in the system to complete the call.
+EISCONN	75	234	133	106	The socket is already connected.
+ENOTCONN	76	235	134	107	The socket is not connected.
+ETIMEDOUT	78	238	145	110	The connection was timed out.
+ECONNREFUSED	79	239	146	111	The connection was refused. If you are trying to connect to the database, check that the database manager and TCP/IP protocol support at the server were started successfully.
+If you specified the SOCKS protocol support, you must also ensure that the TCP/IP protocol support at the SOCKS server was started successfully.
+
+EHOSTDOWN	80	241	147	112	The host is down.
+EHOSTUNREACH	81	242	148	113	No route to the host is available.
+
+
+List of error codes Internet domain
+I/O errors
+
+Error Name	Description	Explanation
+EALREADY	Operation already in progress
+EINPROGRESS	Operation now in progress
+EWOULDBLOCK	Operation would block
+
+Argument errors
+
+Error Name	Description	Explanation
+EADDRINUSE	Address already in use	TCP and UDP. An attempt was made to create a socket with a port which has already been allocated.
+EADDRNOTAVAIL	Can't assign requested address	TCP and UDP. An attempt was made to create a socket with a network address for which no network interface exists.
+EAFNOSUPPORT	Address family not supported by protocol family
+EDESTADDRREQ	Destination address required
+EMSGSIZE	Message too long
+ENOTSOCK	Socket operation on non-socket
+EOPNOTSUPP	Operation not supported on socket
+EPFNOSUPPORT	Protocol family not supported
+EPROTONOSUPPORT	Protocol not supported	Creating a socket. Unknown protocol or protocol not supported.
+EPROTOTYPE	Protocol wrong type for socket	Creating a socket. Socket type request has no supporting protocol.
+ESOCKTNOSUPPORT	Socket type not supported
+Operational errors
+
+Error Name	Description	Explanation
+ECONNABORTED	Software caused connection abort
+ECONNREFUSED	Connection refused	Socket connection. The host refused service for some reason. This error is usually caused by a server process not being present at the requested name.
+ECONNRESET	Connection reset by peer	TCP. The remote peer forced the session to be closed.
+EISCONN	Socket is already connected	IP and UDP. An attempt was made to establish a connection on a socket that already has one or an attempt was made to send a datagram with the destination address specified and the socket is already connected. TCP. An attempt was made to establish a connection on a socket that already has one.
+ENETDOWN	Network is down	Socket connection. Status information received by the client host from the underlying communication services indicates the net or the remote host is down.
+ENETRESET	Network dropped connection on reset
+ENETUNREACH	Network is unreachable
+ENOBUFS	No buffer space available	TCP, IP, and UDP. Any Socket Operation. The system lacks sufficient memory for an internal data structure.
+ENOTCONN	Socket is not connected	UDP. An attempt was made to send a datagram, but no destination address is specified, and the socket has not been connected.
+ESHUTDOWN	Cannot send after socket shutdown
+ETIMEDOUT	Connection timed out	Socket connection. After failing to establish a connection during a period of time (excessive retransmissions), the system decided there was no point in retrying any more. The cause for this error is usually that the remote host is down or that problems in the network resulted in transmissions being lost.
+
+Miscellaneous errors
+
+Error Name	Description	Explanation
+EHOSTDOWN	Host is down	Socket connection. Status information received by the client host from the underlying communication services indicates the net or the remote host is down.
+EHOSTUNREACH	No route to host	Socket connection. These operational errors can occur either because the network or host is unknown (no route to the host or network is present) or because status information to that effect has been delivered to the client host by the underlying communication services.
+ENOPROTOOPT	Protocol not available
+
+Error Codes
+Authenticode Error Codes
+CRL Error Codes
+Domain Keys DNS Error Codes
+Domain Keys Signer Error Codes
+Domain Keys Verifier Error Codes
+HTTP Error Codes
+LDAP Error Codes
+Message Error Codes
+Message S/MIME Error Codes
+MS Key Blob Error Codes
+OCSP Error Codes
+PEM Error Codes
+PKCS12 Error Codes
+POP3 Error Codes
+PVK Error Codes
+S/MIME Error Codes
+SFTP Error Codes
+Socket Error Codes
+SPC Error Codes
+SSH Error Codes
+SSH Key Error Codes
+SSH Tunnel Error Codes
+SSL Error Codes
+TSP Error Codes
+VFS Error Codes
+XML Error Codes
+ZIP Error Codes
+Exception classes
+Error Handling
+
+
+--------
+stolen from various places round the net
+
+ OUTLOOK EXPRESS / MICROSOFT OUTLOOK ERROR CODES
+GENERAL ERRORS
+
+0x800CCC00 LOAD SICILY FAILED - Authentication did not load.
+
+Try closing and restarting Outlook express
+
+If still getting same error, wait 20-30 minutes for a server reset of your account then try again
+
+It could be a corruption of the user account in Outlook Express. Try setting up a second identity and see if it works
+
+0x800CCC01 INVALID CERTIFICATE CONTENT
+
+Get your certificate re-issued by your authority server
+
+0x800CCC02 INVALID CERTIFICATE DATE
+
+Get your certificate re-issued by your authority server
+
+0x800CCC03 USER ALREADY CONNECTED
+
+You may be logged in on another machine. Close all connections on all machines, wait 20-30 minutes and try again
+
+Some mail servers will not recognise an improper disconnection. This will result in the account being 'Poplocked'. Either wait 20-30 minutes for it to time out or get somebody to shell into the mail server and stop the mail task that is running on the account. This can normally only be done with accounts that have UNIX shells
+
+If you are not logged in on another machine or poplocked then someone may be using/downloading from your account or something is wrong with your account
+
+0x800CCC04 CONN
+
+0x800CCC05 NOT CONNECTED TO SERVER
+
+Can you get web pages? If so, you may have the wrong mail server typed in your account settings or the server may be down
+
+If you cannot get web pages then hang up and try connecting again
+
+Reboot the computer and try again
+
+If it's still not working and you are not getting any web pages, then data may not be moving across the network properly. Check DNS numbers, remove and then reinstall TCP/IP in Control Panel > Network.
+
+0x800CCC06 CONN SEND
+
+0x800CCC07 WOULD BLOCK
+
+0x800CCC08 INVALID STATE
+
+0x800CCC09 CONN RECV
+
+0x800CCC0A MESSAGE DOWNLOAD INCOMPLETE
+
+This is a possible corruption of the pop3uidl file. Close the Internet connection and all programs. Search for the file 'pop3uidl and delete it. Reconnect and it should work
+
+Repeat step 1 with a reboot before you check your mail again
+
+You may have a corrupt or a very large file attachment on the mail server. Large file attachments, mail that are missing headers or mail that do not conform to the mail RFC's can cause this
+
+0x800CCC0B SERVER OR MAILDROP IS BUSY
+
+Try to retrieve e-mail about once every 5 minutes. Alternatively, call your ISP help desk to make sure that the server hasn't crashed
+
+You may be logged in on another machine. Close all connections on all machines, wait 20-30 minutes and then try again
+
+Some mail servers will not recognise an improper disconnection. This will result in the account being 'Poplocked'. Either wait 20-30 minutes for it to time out or get somebody to shell into the mail server and stop the mail task that is running on the account. This can normally only be done with accounts that have UNIX shells
+
+If you are not logged in on another machine or poplocked then someone may be using/downloading from your account or something is wrong with your account
+
+0x800CCC0C NOT INIT
+
+0x800CCC0D CANT FIND HOST - Cannot locate server
+
+This error can appear if you have 'notify me if there are any new newsgroups' selected but don't have a news account set up. Go to TOOLS > OPTIONS > GENERAL TAB and untick this option.
+
+If Norton Antivirus is installed then read this article.
+
+Can you get web pages? If so then you may just have the wrong mail server typed into your account details or the server may be down
+
+If you cannot get web pages then hang up and try connecting again
+
+Reboot the computer and try again
+
+If it's still not working and you are not getting any web pages, then data may not be moving across the network properly. Check DNS numbers, remove and then reinstall TCP/IP in Control Panel > Network.
+
+0x800CCC0E FAILED TO CONNECT - Cannot connect to server
+
+This error can appear if you have 'notify me if there are any new newsgroups' selected but don't have a news account set up. Go to TOOLS > OPTIONS > GENERAL TAB and untick this option.
+
+If Norton Antivirus is installed then read this article.
+
+Can you get web pages? If so then you may just have the wrong mail server typed into your account details or the server may be down
+
+If you cannot get web pages then hang up and try connecting again
+
+Reboot the computer and try again
+
+If it's still not working and you are not getting any web pages, then data may not be moving across the network properly. Check DNS numbers, remove and then reinstall TCP/IP in Control Panel > Network.
+
+0x800CCC0F CONNECTION DROPPED
+
+The modem or network cable was disconnected. If this happens frequently then try updating the modem drivers or adding an Init string. Possible cause may be line noise.
+
+0x800CCC10 INVALID ADDRESS - Address not known on server
+
+Check the spelling in the TO: field of the e-mail. Delete the old message from the Outbox and then try it again.
+
+0x800CCC11 INVALID ADDRESS LIST - Mailing list not known on the server
+
+Check the spellings of the address list and try it again.
+
+Check with the administrator (if any) to see if you have the correct access to the list from the terminal you are using.
+
+0x800CCC12 SOCKET READ ERROR - Unable to send Winsock request
+
+Remove the TCP/IP protocol and reinstall it. In windows, go into Network from the Control Panel. NOTE: You may need your Windows CD for this task!
+
+0x800CCC13 SOCKET WRITE ERROR - Unable to read Winsock
+
+This error sometimes appears when trying to download e-mails with an attachment. Having software such as Netnanny installed can cause this to happen. Disabling the software can resolve this error.
+
+Remove the TCP/IP protocol and reinstall it. In windows, go into Network from the Control Panel. NOTE: You may need your Windows CD for this task!
+
+0x800CCC14 SOCKET INIT ERROR - Unable to initialise Winsock.
+
+Remove the TCP/IP protocol and reinstall it. In windows, go into Network from the Control Panel. NOTE: You may need your Windows CD for this task! In Windows XPsp2 and later open a command prompt and type "netsh winsock reset".
+
+0x800CCC15 SOCKET CONNECT ERROR - Unable to open Windows socket
+
+Remove the TCP/IP protocol and reinstall it. In windows, go into Network from the Control Panel. NOTE: You may need your Windows CD for this task!
+
+0x800CCC16 INVALID ACCOUNT - User account not recognised
+
+Check the spelling of the account name and re-enter the password taking care to spell it correctly.
+
+0x800CCC17 USER CANCEL
+
+You have pressed the cancel button
+
+You may have mail that are missing headers, mail that does not conform to the mail RFC's or a corrupt or very large file attachment on the mail server.
+
+If you pressed cancel because it is taking a long while or is timing out then the pop3uidl file may be corrupted. Close your Internet connection and all other programs. Find and delete the file, pop3uidl, reconnect and try it again.
+
+If still the same error then repeat step 3, and reboot before trying to check the mail again.
+
+0x800CCC18 SICILY LOGON FAILED - Logon attempt failed
+
+Check account information, making sure account is not case sensitive, close Outlook Express, restart the computer and try reconnecting.
+
+Create a different identity and see if it will logon on from this identity with the same information.
+
+Make sure the account is still active with the ISP and that the ISP is not having an e-mail outllook.
+
+0x800CCC19 TIMEOUT
+
+This is a possible corruption of the pop3uidl file. Close the Internet connection and all programs. Search for the file 'pop3uidl and delete it. Reconnect and it should work
+
+Repeat step 1 with a reboot before you check your mail again
+
+You may have a corrupt or a very large file attachment on the mail server. Large file attachments, mail that are missing headers or mail that do not conform to the mail RFC's can cause this
+
+0x800CCC1A SECURE CONNECT FAILED - Unable to connect using SSL
+
+Your ISP may not require an SSL connection. Turn off SSL in the e-mail account properties and try again
+
+POP3 ERRORS
+
+0x800420CB POP3 NO STORE - Mail cannot be stored on server
+
+0x800CCC90 POP3 RESPONSE ERROR - Client response invalid
+
+0x800CCC91 POP3 INVALID USERNAME - Invalid username or username not found
+
+0x800CCC92 POP3 INVALID PASSWORD - Password not valid for account
+
+0x800CCC93 POP3 PARSE FAILURE - Unable to interpret response
+
+0x800CCC94 POP3 NEED STAT - STAT command required
+
+0x800CCC95 POP3 NO MESSAGES - No messages on the server
+
+0x800CCC96 POP3 NO MARKED MESSAGES - No messages marked for retrieval
+
+0x800CCC97 POP3 POPID OUT OF RANGE - Message ID out of range
+
+SMTP ERRORS
+
+0x800CCC60 SMTP RESPONSE ERROR - Invalid response
+
+0x800CCC61 SMTP UNKNOWN RESPONSE CODE - Unknown error code
+
+0x800CCC62 SMTP 500 SYNTAX ERROR - Syntax error returned
+
+0x800CCC63 SMTP 501 PARAM SYNTAX - Parameter syntax incorrect
+
+0x800CCC64 SMTP 502 COMMAND NOTIMPL - Command not implemented
+
+0x800CCC65 SMTP 503 COMMAND SEQ - Improper command sequence
+
+0x800CCC66 SMTP 504 COMMAND PARAM NOTIMPL - Command not implemented
+
+0x800CCC67 SMTP 421 NOT AVAILABLE - Command not available
+
+0x800CCC68 SMTP 450 MAILBOX BUSY - Mailbox is locked and busy
+
+0x800CCC69 SMTP 550 MAILBOX NOT FOUND - Mailbox not found
+
+0x800CCC6A SMTP 451 ERROR PROCESSING - Error processing request
+
+0x800CCC6B SMTP 551 USER NOT LOCAL - User mailbox is known but mailbox not on this server
+
+0x800CCC6C SMTP 452 NO SYSTEM STORAGE - No space to store messages
+
+0x800CCC6D SMTP 552 STORAGE OVERFLOW - Storage limit exceeded
+
+0x800CCC6E SMTP 553 MAILBOX NAME SYNTAX - Invalid mailbox name syntax
+
+0x800CCC6F SMTP 554 TRANSACT FAILED - Transaction failed
+
+0x800CCC78 SMTP REJECTED SENDER - Unknown sender
+
+This is caused by having the incorrect e-mail address in the 'Reply To' field
+0x800CCC79 SMTP REJECTED RECIPIENTS - Server rejected recipients
+
+0x800CCC7A SMTP NO SENDER - No sender address specified
+
+0x800CCC7B SMTP NO RECIPIENTS - No recipients specified
+
+NNTP ERRORS
+
+0x800CCCA0 NNTP RESPONSE ERROR - News server response error
+
+0x800CCCA1 NNTP NEWSGROUPS FAILED - Newsgroup access failed
+
+0x800CCCA2 NNTP LIST FAILED - LIST command to server failed
+
+0x800CCCA3 NNTP LISTGROUP FAILED - Unable to display list
+
+0x800CCCA4 NNTP GROUP FAILED - Unable to open group
+
+0x800CCCA5 NNTP GROUP NOTFOUND - Group not on server
+
+0x800CCCA6 NNTP ARTICLE FAILED - Message not on server
+
+0x800CCCA7 NNTP HEAD FAILED - Message header not found
+
+0x800CCCA8 NNTP BODY FAILED - Message body not found
+
+0x800CCCA9 NNTP POST FAILED - Unable to post to server
+
+0x800CCCAA NNTP NEXT FAILED - Unable to open next message
+
+0x800CCCAB NNTP DATE FAILED - Unable to display date
+
+0x800CCCAC NNTP HEADERS FAILED - Unable to display headers
+
+0x800CCCAD NNTP XHDR FAILED - Unable to display MIME headers
+
+0x800CCCAE NNTP INVALID USERPASS - Invalid username or password
+
+RAS/DUN ERRORS
+
+0x800CCCC2 RAS NOT INSTALLED - RAS/DUN not installed
+
+0x800CCCC3 RAS PROCS NOT FOUND - RAS/DUN process not found
+
+0x800CCCC4 RAS ERROR - RAS/DUN error returned
+
+0x800CCCC5 RAS INVALID CONNECTOID - Connectoid damaged or missing
+
+0x800CCCC6 RAS GET DIAL PARAMS - Error getting dial settings
+
+WINSOCK ERRORS
+
+0x800CCC40 WINSOCK WSASYSNOTREADY - Network subsystem is unusable
+
+0x800CCC41 WINSOCK WSAVERNOTSUPPORTED - Windows Sockets cannot support this application
+
+0x800CCC42 WINSOCK WSAEPROCLIM
+
+0x800CCC43 WINSOCK WSAEFAULT - Bad address
+
+0x800CCC44 WINSOCK FAILED WSASTARTUP - Unable to load Windows Sockets
+
+0x800CCC45 WINSOCK WSAEINPROGRESS - Operation now in progress
+
+This error appears if a Windows Sockets API is called while a blocking function is in progress
+
+IMAP ERRORS
+
+0x800CCCD1 IMAP LOGINFAILURE - Login failed
+
+0x800CCCD2 IMAP TAGGED NO RESPONSE - Message tagged
+
+0x800CCCD3 IMAP BAD RESPONSE - Invalid response to request
+
+0x800CCCD4 IMAP SVR SYNTAXERR - Syntax error
+
+0x800CCCD5 IMAP NOTIMAPSERVER - Not an IMAP server
+
+0x800CCCD6 IMAP BUFFER OVERFLOW - Buffer limit exceeded
+
+0x800CCCD7 IMAP RECVR ERROR - Recovery error
+
+0x800CCCD8 IMAP INCOMPLETE LINE - Incomplete data
+
+0x800CCCD9 IMAP CONNECTION REFUSED - Connection not allowed
+
+0x800CCCDA IMAP UNRECOGNISED RESP - Unknown response
+
+0x800CCCDB IMAP CHANGEDUID - User ID has changed
+
+0x800CCCDC IMAP UIDORDER - User ID command failed
+
+0x800CCCDD IMAP UNSOLICITED BYE - Unexpected disconnect
+
+0x800CCCDE IMAP IMPROPER SVRSTATE - Invalid server state
+
+0x800CCCDF IMAP AUTH NOT POSSIBLE - Unable to authorize client
+
+0x800CCCE0 IMAP OUT OF AUTH METHODS - No more authorization types
+
+
+
+http://www.modemhelp.net/oeerrors/oe.shtml
+
+Error Code	Fixit!	Error Type	Description
+0x800CCC00	Fix	LOAD_SICILY_FAILED	Authentication did not load.
+0x800CCC01	Fix	INVALID_CERT_CN	Invalid certificate content.
+0x800CCC02	Fix	INVALID_CERT_DATE	Invalid certificate date.
+0x800CCC03	Fix	ALREADY_CONNECTED	User already connected.
+0x800CCC04	N/A	CONN	N/A
+0x800CCC05	Fix	NOT_CONNECTED	Not connected to server.
+0x800CCC06	N/A	CONN_SEND	N/A
+0x800CCC07	N/A	WOULD_BLOCK	N/A
+0x800CCC08	N/A	INVALID_STATE	N/A
+0x800CCC09	N/A	CONN_RECV	N/A
+0x800CCC0A	Fix	INCOMPLETE	Message download incomplete.
+0x800CCC0B	Fix	BUSY	Server or maildrop is busy.
+0x800CCC0C	N/A	NOT_INIT	N/A
+0x800CCC0D	Fix	CANT_FIND_HOST	Cannot locate server.
+0x800CCC0E	Fix	FAILED_TO_CONNECT	Cannot connect to server.
+0x800CCC0F	Fix	CONNECTION_DROPPED	Connection closed.
+0x800CCC10	Fix	INVALID_ADDRESS	Address not known on server.
+0x800CCC11	Fix	INVALID_ADDRESS_LIST	Mailing list not known on server.
+0x800CCC12	Fix	SOCKET_READ_ERROR	Unable to send Winsock request.
+0x800CCC13	Fix	SOCKET_WRITE_ERROR	Unable to read Winsock reply.
+0x800CCC14	Fix	SOCKET_INIT_ERROR	Unable to initialize Winsock.
+0x800CCC15	Fix	SOCKET_CONNECT_ERROR	Unable to open Windows Socket.
+0x800CCC16	Fix	INVALID_ACCOUNT	User account not recognized.
+0x800CCC17	Fix	USER_CANCEL	User canceled operation.
+0x800CCC18	Fix	SICILY_LOGON_FAILED	Logon attempt failed.
+0x800CCC19	Fix	TIMEOUT	N/A
+0x800CCC1A	Fix	SECURE_CONNECT_FAILED	Unable to connect using SSL.
+
+
+
+POP3 Errors
+
+Error Code	Fixit!	Error Type	Description
+0x800420CB	N/A	POP3_NO_STORE	Mail cannot be stored on server.
+0x800CCC90	N/A	POP3_RESPONSE_ERROR	Client response invalid.
+0x800CCC91	N/A	POP3_INVALID_USER_NAME	Invalid user name or user not found.
+0x800CCC92	N/A	POP3_INVALID_PASSWORD	Password not valid for account.
+0x800CCC93	N/A	POP3_PARSE_FAILURE	Unable to interpret response.
+0x800CCC94	N/A	POP3_NEED_STAT	STAT Command required.
+0x800CCC95	N/A	POP3_NO_MESSAGES	No messages on server.
+0x800CCC96	N/A	POP3_NO_MARKED_MESSAGES	No messages marked for retrieval.
+0x800CCC97	N/A	POP3_POPID_OUT_OF_RANGE	Message ID out of range.
+
+
+
+SMTP Errors
+
+Error Code	Fixit!	Error Type	Description
+0x800CCC60	N/A	SMTP_RESPONSE_ERROR	Invalid response.
+0x800CCC61	N/A	SMTP_UNKNOWN_RESPONSE_CODE	Unknown error code.
+0x800CCC62	N/A	SMTP_500_SYNTAX_ERROR	Syntax error returned.
+0x800CCC63	N/A	SMTP_501_PARAM_SYNTAX	Parameter syntax incorrect.
+0x800CCC64	N/A	SMTP_502_COMMAND_NOTIMPL	Command not implemented.
+0x800CCC65	N/A	SMTP_503_COMMAND_SEQ	Improper command sequence.
+0x800CCC66	N/A	SMTP_504_COMMAND_PARAM_NOTIMPL	Command not implemented.
+0x800CCC67	N/A	SMTP_421_NOT_AVAILABLE	Command not available.
+0x800CCC68	N/A	SMTP_450_MAILBOX_BUSY	Mailbox is locked and busy.
+0x800CCC69	N/A	SMTP_550_MAILBOX_NOT_FOUND	Mailbox not found.
+0x800CCC6A	N/A	SMTP_451_ERROR_PROCESSING	Error processing request.
+0x800CCC6B	N/A	SMTP_551_USER_NOT_LOCAL	User mailbox is known, but mailbox not on this server.
+0x800CCC6C	N/A	SMTP_452_NO_SYSTEM_STORAGE	No space to store messages.
+0x800CCC6D	N/A	SMTP_552_STORAGE_OVERFLOW	Storage limit exceeded.
+0x800CCC6E	N/A	SMTP_553_MAILBOX_NAME_SYNTAX	Invalid mailbox name syntax.
+0x800CCC6F	N/A	SMTP_554_TRANSACT_FAILED	Transaction failed.
+0x800CCC78	N/A	SMTP_REJECTED_SENDER	Unknown sender. This is caused by having the incorrect e-mail address in the Reply-To field.
+0x800CCC79	N/A	SMTP_REJECTED_RECIPIENTS	Server rejected recipients.
+0x800CCC7A	N/A	SMTP_NO_SENDER	No sender address specified.
+0x800CCC7B	N/A	SMTP_NO_RECIPIENTS	No recipients specified.
+
+
+
+NNTP Errors
+
+Error Code	Fixit!	Error Type	Description
+0x800CCCA0	N/A	NNTP_RESPONSE_ERROR	News server response error.
+0x800CCCA1	N/A	NNTP_NEWGROUPS_FAILED	Newsgroup access failed.
+0x800CCCA2	N/A	NNTP_LIST_FAILED	LIST command to server failed.
+0x800CCCA3	N/A	NNTP_LISTGROUP_FAILED	Unable to display list.
+0x800CCCA4	N/A	NNTP_GROUP_FAILED	Unable to open group.
+0x800CCCA5	N/A	NNTP_GROUP_NOTFOUND	Group not on server.
+0x800CCCA6	N/A	NNTP_ARTICLE_FAILED	Message not on server.
+0x800CCCA7	N/A	NNTP_HEAD_FAILED	Message header not found.
+0x800CCCA8	N/A	NNTP_BODY_FAILED	Message body not found.
+0x800CCCA9	N/A	NNTP_POST_FAILED	Unable to post to server.
+0x800CCCAA	N/A	NNTP_NEXT_FAILED	Unable to open next message.
+0x800CCCAB	N/A	NNTP_DATE_FAILED	Unable to display date.
+0x800CCCAC	N/A	NNTP_HEADERS_FAILED	Unable to display headers.
+0x800CCCAD	N/A	NNTP_XHDR_FAILED	Unable to display MIME headers.
+0x800CCCAE	N/A	NNTP_INVALID_USERPASS	Invalid user or password.
+
+
+
+RAS/DUN Errors
+
+Error Code	Fixit!	Error Type	Description
+0x800CCCC2	N/A	RAS_NOT_INSTALLED	RAS/DUN not installed.
+0x800CCCC3	N/A	RAS_PROCS_NOT_FOUND	RAS/DUN process not found.
+0x800CCCC4	N/A	RAS_ERROR	RAS/DUN error returned.
+0x800CCCC5	N/A	RAS_INVALID_CONNECTOID	Connectoid damaged or missing.
+0x800CCCC6	N/A	RAS_GET_DIAL_PARAMS	Error getting dial settings.
+
+
+
+Winsock Errors
+
+Error Code	Fixit!	Error Type	Description
+0x800CCC40	N/A	WINSOCK_WSASYSNOTREADY	Network subsystem is unusable.
+0x800CCC41	N/A	WINSOCK_WSAVERNOTSUPPORTED	Windows Sockets cannot support this application.
+0x800CCC42	N/A	WINSOCK_WSAEPROCLIM	N/A
+0x800CCC43	N/A	WINSOCK_WSAEFAULT	Bad address.
+0x800CCC44	N/A	WINSOCK_FAILED_WSASTARTUP	Unable to load Windows Sockets.
+0x800CCC45	N/A	WINSOCK_WSAEINPROGRESS	Operation now in progress. This error appears if a Windows Sockets API is called while a blocking function is in progress.
+
+
+
+IMAP Errors
+
+Error Code	Fixit!	Error Type	Description
+0x800CCCD1	N/A	IMAP_LOGINFAILURE	Login failed.
+0x800CCCD2	N/A	IMAP_TAGGED_NO_RESPONSE	Message tagged.
+0x800CCCD3	N/A	IMAP_BAD_RESPONSE	Invalid response to request.
+0x800CCCD4	N/A	IMAP_SVR_SYNTAXERR	Syntax error.
+0x800CCCD5	N/A	IMAP_NOTIMAPSERVER	Not an IMAP server.
+0x800CCCD6	N/A	IMAP_BUFFER_OVERFLOW	Buffer limit exceeded.
+0x800CCCD7	N/A	IMAP_RECVR_ERROR	Recovery error.
+0x800CCCD8	N/A	IMAP_INCOMPLETE_LINE	Incomplete data.
+0x800CCCD9	N/A	IMAP_CONNECTION_REFUSED	Connection not allowed.
+0x800CCCDA	N/A	IMAP_UNRECOGNIZED_RESP	Unknown response.
+0x800CCCDB	N/A	IMAP_CHANGEDUID	User ID has changed.
+0x800CCCDC	N/A	IMAP_UIDORDER	User ID command failed.
+0x800CCCDD	N/A	IMAP_UNSOLICITED_BYE	Unexpected disconnect.
+0x800CCCDE	N/A	IMAP_IMPROPER_SVRSTATE	Invalid server state.
+0x800CCCDF	N/A	IMAP_AUTH_NOT_POSSIBLE	Unable to authorize client.
+0x800CCCE0	N/A	IMAP_OUT_OF_AUTH_METHODS	No more authorization types.
+
+
+The following list contains the error codes for dial-up connections or VPN connections:
+
+600
+An operation is pending.
+
+601
+The port handle is invalid.
+
+602
+The port is already open.
+
+603
+Caller's buffer is too small.
+
+604
+Wrong information specified.
+
+605
+Cannot set port information.
+
+606
+The port is not connected.
+
+607
+The event is invalid.
+
+608
+The device does not exist.
+
+609
+The device type does not exist.
+
+610
+The buffer is invalid.
+
+611
+The route is not available.
+
+612
+The route is not allocated.
+
+613
+Invalid compression specified.
+
+614
+Out of buffers.
+
+615
+The port was not found.
+
+616
+An asynchronous request is pending.
+
+617
+The port or device is already disconnecting.
+
+618
+The port is not open.
+
+619
+The port is disconnected.
+
+620
+There are no endpoints.
+
+621
+Cannot open the phone book file.
+
+622
+Cannot load the phone book file.
+
+623
+Cannot find the phone book entry.
+
+624
+Cannot write the phone book file.
+
+625
+Invalid information found in the phone book.
+
+626
+Cannot load a string.
+
+627
+Cannot find key.
+
+628
+The port was disconnected.
+
+629
+The port was disconnected by the remote machine.
+
+630
+The port was disconnected due to hardware failure.
+
+631
+The port was disconnected by the user.
+
+632
+The structure size is incorrect.
+
+633
+The port is already in use or is not configured for Remote Access dialout.
+
+634
+Cannot register your computer on the remote network.
+
+635
+Unknown error.
+
+636
+The wrong device is attached to the port.
+
+637
+The string could not be converted.
+
+638
+The request has timed out.
+
+639
+No asynchronous net available.
+
+640
+A NetBIOS error has occurred.
+
+641
+The server cannot allocate NetBIOS resources needed to support the client.
+
+642
+One of your NetBIOS names is already registered on the remote network.
+
+643
+A network adapter at the server failed.
+
+644
+You will not receive network message popups.
+
+645
+Internal authentication error.
+
+646
+The account is not permitted to log on at this time of day.
+
+647
+The account is disabled.
+
+648
+The password has expired.
+
+649
+The account does not have Remote Access permission.
+
+650
+The Remote Access server is not responding.
+
+651
+Your modem (or other connecting device) has reported an error.
+
+652
+Unrecognized response from the device.
+
+653
+A macro required by the device was not found in the device .INF file section.
+
+654
+A command or response in the device .INF file section refers to an undefined macro
+
+655
+The <message> macro was not found in the device .INF file section.
+
+656
+The <defaultoff> macro in the device .INF file section contains an undefined macro
+
+657
+The device .INF file could not be opened.
+
+658
+The device name in the device .INF or media .INI file is too long.
+
+659
+The media .INI file refers to an unknown device name.
+
+660
+The device .INF file contains no responses for the command.
+
+661
+The device .INF file is missing a command.
+
+662
+Attempted to set a macro not listed in device .INF file section.
+
+663
+The media .INI file refers to an unknown device type.
+
+664
+Cannot allocate memory.
+
+665
+The port is not configured for Remote Access.
+
+666
+Your modem (or other connecting device) is not functioning.
+
+667
+Cannot read the media .INI file.
+
+668
+The connection dropped.
+
+669
+The usage parameter in the media .INI file is invalid.
+
+670
+Cannot read the section name from the media .INI file.
+
+671
+Cannot read the device type from the media .INI file.
+
+672
+Cannot read the device name from the media .INI file.
+
+673
+Cannot read the usage from the media .INI file.
+
+674
+Cannot read the maximum connection BPS rate from the media .INI file.
+
+675
+Cannot read the maximum carrier BPS rate from the media .INI file.
+
+676
+The line is busy.
+
+677
+A person answered instead of a modem.
+
+678
+There is no answer.
+
+679
+Cannot detect carrier.
+
+680
+There is no dial tone.
+
+681
+General error reported by device.
+
+682
+ERROR WRITING SECTIONNAME
+
+683
+ERROR WRITING DEVICETYPE
+
+684
+ERROR WRITING DEVICENAME
+
+685
+ERROR WRITING MAXCONNECTBPS
+
+686
+ERROR WRITING MAXCARRIERBPS
+
+687
+ERROR WRITING USAGE
+
+688
+ERROR WRITING DEFAULTOFF
+
+689
+ERROR READING DEFAULTOFF
+
+690
+ERROR EMPTY INI FILE
+
+691
+Access denied because username and/or password is invalid on the domain.
+
+692
+Hardware failure in port or attached device.
+
+693
+ERROR NOT BINARY MACRO
+
+694
+ERROR DCB NOT FOUND
+
+695
+ERROR STATE MACHINES NOT STARTED
+
+696
+ERROR STATE MACHINES ALREADY STARTED
+
+697
+ERROR PARTIAL RESPONSE LOOPING
+
+698
+A response keyname in the device .INF file is not in the expected format.
+
+699
+The device response caused buffer overflow.
+
+700
+The expanded command in the device .INF file is too long.
+
+701
+The device moved to a BPS rate not supported by the COM driver.
+
+702
+Device response received when none expected.
+
+703
+ERROR INTERACTIVE MODE
+
+704
+ERROR BAD CALLBACK NUMBER
+
+705
+ERROR INVALID AUTH STATE
+
+706
+ERROR WRITING INITBPS
+
+707
+X.25 diagnostic indication.
+
+708
+The account has expired.
+
+709
+Error changing password on domain.
+
+710
+Serial overrun errors were detected while communicating with your modem.
+
+711
+RasMan initialization failure. Check the event log.
+
+712
+Biplex port is initializing. Wait a few seconds and redial.
+
+713
+No active ISDN lines are available.
+
+714
+Not enough ISDN channels are available to make the call.
+
+715
+Too many errors occurred because of poor phone line quality.
+
+716
+The Remote Access IP configuration is unusable.
+
+717
+No IP addresses are available in the static pool of Remote Access IP addresses.
+
+718
+PPP timeout.
+
+719
+PPP terminated by remote machine.
+
+720
+No PPP control protocols configured.
+
+721
+Remote PPP peer is not responding.
+
+722
+The PPP packet is invalid.
+
+723
+The phone number, including prefix and suffix, is too long.
+
+724
+The IPX protocol cannot dial-out on the port because the computer is an IPX router.
+
+725
+The IPX protocol cannot dial-in on the port because the IPX router is not installed.
+
+726
+The IPX protocol cannot be used for dial-out on more than one port at a time.
+
+727
+Cannot access TCPCFG.DLL.
+
+728
+Cannot find an IP adapter bound to Remote Access.
+
+729
+SLIP cannot be used unless the IP protocol is installed. 730
+Computer registration is not complete.
+
+731
+The protocol is not configured.
+
+732
+The PPP negotiation is not converging.
+
+733
+The PPP control protocol for this network protocol is not available on the server.
+
+734
+The PPP link control protocol terminated..
+
+735
+The requested address was rejected by the server..
+
+736
+The remote computer terminated the control protocol.
+
+737
+Loopback detected..
+
+738
+The server did not assign an address.
+
+739
+The remote server cannot use the Windows NT encrypted password.
+
+740
+The TAPI devices configured for Remote Access failed to initialize or were not installed correctly.
+
+741
+The local computer does not support encryption.
+
+742
+The remote server does not support encryption.
+
+743
+The remote server requires encryption.
+
+744
+Cannot use the IPX net number assigned by the remote server. Check the event log.
+
+745
+ERROR_INVALID_SMM
+
+746
+ERROR_SMM_UNINITIALIZED
+
+747
+ERROR_NO_MAC_FOR_PORT
+
+748
+ERROR_SMM_TIMEOUT
+
+749
+ERROR_BAD_PHONE_NUMBER
+
+750
+ERROR_WRONG_MODULE
+
+751
+The callback number contains an invalid character. Only the following 18 characters are allowed: 0 to 9, T, P, W, (, ), -, @, and space
+
+752
+A syntax error was encountered while processing a script.
+
+753
+The connection could not be disconnected because it was created by the multi-protocol router.
+
+754
+The system could not find the multi-link bundle.
+
+755
+The system cannot perform automated dial because this connection has a custom dialer specified.
+
+756
+This connection is already being dialed.
+
+757
+Remote Access Services could not be started automatically. Additional information is provided in the event log.
+
+758
+Internet Connection Sharing is already enabled on the connection.
+
+759
+An error occurred while the existing Internet Connection Sharing settings were being changed.
+
+760
+An error occurred while routing capabilities were being enabled.
+
+761
+An error occurred while Internet Connection Sharing was being enabled for the connection.
+
+762
+An error occurred while the local network was being configured for sharing.
+
+763
+Internet Connection Sharing cannot be enabled. There is more than one LAN connection other than the connection to be shared.
+
+764
+No smart card reader is installed.
+
+765
+Internet Connection Sharing cannot be enabled. A LAN connection is already configured with the IP address that is required for automatic IP addressing.
+
+766
+A certificate could not be found. Connections that use the L2TP protocol over IPSec require the installation of a machine certificate, also known as a computer certificate.
+
+767
+Internet Connection Sharing cannot be enabled. The LAN connection selected as the private network has more than one IP address configured. Please reconfigure the LAN connection with a single IP address before enabling Internet Connection Sharing.
+
+768
+The connection attempt failed because of failure to encrypt data.
+
+769
+The specified destination is not reachable.
+
+770
+The remote computer rejected the connection attempt.
+
+771
+The connection attempt failed because the network is busy.
+
+772
+The remote computer's network hardware is incompatible with the type of call requested.
+
+773
+The connection attempt failed because the destination number has changed.
+
+774
+The connection attempt failed because of a temporary failure. Try connecting again.
+
+775
+The call was blocked by the remote computer.
+
+776
+The call could not be connected because the remote computer has invoked the Do Not Disturb feature.
+
+777
+The connection attempt failed because the modem (or other connecting device on the remote computer is out of order.
+
+778
+It was not possible to verify the identity of the server.
+
+779
+To dial out using this connection you must use a smart card.
+
+780
+An attempted function is not valid for this connection.
+
+781
+The connection requires a certificate, and no valid certificate was found. For further assistance, click More Info or search Help and Support Center for this error number.
+
+782
+Internet Connection Sharing (ICS and Internet Connection Firewall (ICF cannot be enabled because Routing and Remote Access has been enabled on this computer. To enable ICS or ICF, first disable Routing and Remote Access. For more information about Routing and Remote Access, ICS, or ICF, see Help and Support.
+
+783
+Internet Connection Sharing cannot be enabled. The LAN connection selected as the private network is either not present, or is disconnected from the network. Please ensure that the LAN adapter is connected before enabling Internet Connection Sharing.
+
+784
+You cannot dial using this connection at logon time, because it is configured to use a user name different than the one on the smart card. If you want to use it at logon time, you must configure it to use the user name on the smart card.
+
+785
+You cannot dial using this connection at logon time, because it is not configured to use a smart card. If you want to use it at logon time, you must edit the properties of this connection so that it uses a smart card.
+
+786
+The L2TP connection attempt failed because there is no valid machine certificate on your computer for security authentication.
+
+787
+The L2TP connection attempt failed because the security layer could not authenticate the remote computer.
+
+788
+The L2TP connection attempt failed because the security layer could not negotiate compatible parameters with the remote computer.
+
+789
+The L2TP connection attempt failed because the security layer encountered a processing error during initial negotiations with the remote computer.
+
+790
+The L2TP connection attempt failed because certificate validation on the remote computer failed.
+
+791
+The L2TP connection attempt failed because security policy for the connection was not found.
+
+792
+The L2TP connection attempt failed because security negotiation timed out.
+
+793
+The L2TP connection attempt failed because an error occurred while negotiating security.
+
+794
+The Framed Protocol RADIUS attribute for this user is not PPP.
+
+795
+The Tunnel Type RADIUS attribute for this user is not correct.
+
+796
+The Service Type RADIUS attribute for this user is neither Framed nor Callback Framed.
+
+797
+A connection to the remote computer could not be established because the modem was not found or was busy. For further assistance, click More Info or search Help and Support Center for this error number.
+
+798
+A certificate could not be found that can be used with this Extensible Authentication Protocol.
+
+799
+Internet Connection Sharing (ICS cannot be enabled due to an IP address conflict on the network. ICS requires the host be configured to use 192.168.0.1. Please ensure that no other client on the network is configured to use 192.168.0.1.
+
+800
+Unable to establish the VPN connection. The VPN server may be unreachable, or security parameters may not be configured properly for this connection.
+
+801
+This connection is configured to validate the identity of the access server, but Windows cannot verify the digital certificate sent by the server.
+
+802
+The card supplied was not recognized. Please check that the card is inserted correctly, and fits tightly.
+
+803
+The PEAP configuration stored in the session cookie does not match the current session configuration.
+
+804
+The PEAP identity stored in the session cookie does not match the current identity.
+
+805
+You cannot dial using this connection at logon time, because it is configured to use logged on user's credentials.
+
+900
+The router is not running.
+
+901
+The interface is already connected.
+
+902
+The specified protocol identifier is not known to the router.
+
+903
+The Demand-dial Interface Manager is not running.
+
+904
+An interface with this name is already registered with the router.
+
+905
+An interface with this name is not registered with the router.
+
+906
+The interface is not connected.
+
+907
+The specified protocol is stopping.
+
+908
+The interface is connected and hence cannot be deleted.
+
+909
+The interface credentials have not been set.
+
+910
+This interface is already in the process of connecting.
+
+911
+An update of routing information on this interface is already in progress.
+
+912
+The interface configuration in invalid. There is already another interface that is connected to the same interface on the remote router.
+
+913
+A Remote Access Client attempted to connect over a port that was reserved for Routers only.
+
+914
+A Demand Dial Router attempted to connect over a port that was reserved for Remote Access Clients only.
+
+915
+The client interface with this name already exists and is currently connected.
+
+916
+The interface is in a disabled state.
+
+917
+The authentication protocol was rejected by the remote peer.
+
+918
+There are no authentication protocols available for use.
+
+919
+The remote computer refused to be authenticated using the configured authentication protocol. The line has been disconnected.
+
+920
+The remote account does not have Remote Access permission.
+
+921
+The remote account has expired.
+
+922
+The remote account is disabled.
+
+923
+The remote account is not permitted to logon at this time of day.
+
+924
+Access was denied to the remote peer because username and/or password is invalid on the domain.
+
+925
+There are no routing enabled ports available for use by this demand dial interface.
+
+926
+The port has been disconnected due to inactivity.
+
+927
+The interface is not reachable at this time.
+
+928
+The Demand Dial service is in a paused state.
+
+929
+The interface has been disconnected by the administrator.
+
+930
+The authentication server did not respond to authentication requests in a timely fashion.
+
+931
+The maximum number of ports allowed for use in the multilinked connection has been reached.
+
+932
+The connection time limit for the user has been reached.
+
+933
+The maximum limit on the number of LAN interfaces supported has been reached.
+
+934
+The maximum limit on the number of Demand Dial interfaces supported has been reached.
+
+935
+The maximum limit on the number of Remote Access clients supported has been reached.
+
+936
+The port has been disconnected due to the BAP policy.
+
+937
+Because another connection of your type is in use, the incoming connection cannot accept your connection request.
+
+938
+No RADIUS servers were located on the network.
+
+939
+An invalid response was received from the RADIUS authentication server. Make sure that the case sensitive secret password for the RADIUS server is set correctly.
+
+940
+You do not have permission to connect at this time.
+
+941
+You do not have permission to connect using the current device type.
+
+942
+You do not have permission to connect using the selected authentication protocol.
+
+943
+BAP is required for this user.
+
+944
+The interface is not allowed to connect at this time.
+
+945
+The saved router configuration is incompatible with the current router.
+
+946
+RemoteAccess has detected older format user accounts that will not be migrated automatically. To migrate these manually, run XXXX.
+
+948
+The transport is already installed with the router.
+
+949
+Received invalid signature length in packet from RADIUS server.
+
+950
+Received invalid signature in packet from RADIUS server.
+
+951
+Did not receive signature along with EAPMessage from RADIUS server.
+
+952
+Received packet with invalid length or Id from RADIUS server.
+
+953
+Received packet with attribute with invalid length from RADIUS server.
+
+954
+Received invalid packet from RADIUS server.
+
+955
+Authenticator does not match in packet from RADIUS server.
