@@ -1,0 +1,111 @@
+
+DHCP
+----
+{
+    auto eth0
+    allow-hotplug eth0
+    iface eth0 inet dhcp
+    
+    ip6
+    ----
+    iface eth0 inet6 dhcp
+    iface eth0 inet6 auto
+}
+
+Static
+------
+{
+         auto eth0
+        iface eth0 inet static
+        address 192.0.2.7/24
+        gateway 192.0.2.254
+        
+        iface eth0 inet6 static
+        address 2001:db8::c0ca:1eaf/64
+        gateway 2001:db8::1ead:ed:beef
+        
+
+}
+
+
+
+# manual unique local address
+iface eth0 inet6 static
+        address fdc3:cafe::3/64
+        # use SLAAC to get global IPv6 address from the router
+        # we may not enable ipv6 forwarding, otherwise SLAAC gets disabled
+        autoconf 1
+        accept_ra 2
+        
+        
+ethtool -s eth0 speed 100 duplex full autoneg off (assuming 100 Mbps and full duplex)
+mii-tool -F 100baseTx-FD eth0 (same assumption)
+
+
+DNS
+---
+vi /etc/resolv.conf 
+
+nameserver 12.34.56.78
+nameserver 12.34.56.79
+
+
+Bridging
+--------
+Bridging puts multiple interfaces into the same network segment. This is very popular when connecting a server to multiple switches for high availability or with virtualization. In the latter case it is usually used to create a bridge in the host (eg. dom0) and put the virtual interfaces of the guests (domU) into the bridge.
+Example: Connect a server to 2 switches (via eth0 and eth1) by defining bridge 0 and give the server an IP address in this subnet:
+{
+      auto br0
+      iface br0 inet static
+        address 10.10.0.15/24
+        gateway 10.10.0.1
+        bridge_ports eth0 eth1
+        up /usr/sbin/brctl stp br0 on
+ }
+ if a server is connected to multiple switches then you usually need to run the spanning tree protocol to avoid loops. Therefore STP must be turned on via an "up" command as shown above
+ 
+ Example: Bridge setup without IP address configuration (use "manual" instead of "static") to "forward" an interface to a guest VM. (The static bridge config contains only 1 physical interface. The virtual interface will be added to the bridge when the VM is started.)
+
+
+auto br1
+iface br1 inet manual
+        bridge_ports eth4
+        up /usr/sbin/brctl setageing br1 0
+        up /usr/sbin/brctl stp br1 off
+        
+        
+        
+vlan
+----
+{
+Manual config
+
+modprobe 8021q
+
+apt install vlan
+
+vconfig add eth0 222    # 222 is vlan number
+ifconfig eth0.222 up
+ifconfig eth0.222 mtu 1496    #optional if your network card doesn't support MTU 1504B
+ifconfig eth0.222 10.10.10.1 netmask 255.255.255.0
+
+Into /etc/modules add line:
+
+8021q
+In /etc/network/interfaces to section iface add parameter:
+
+        vlan-raw-device eth0
+        The interface name should be the raw interface name (the same as specified by vlan-raw-device), then a dot, then the VLAN ID, for example eth0.100. It can instead be "vlan" then the VLAN ID, for example vlan100. In either case, the VLAN ID is on the end, and this is the only place that it is configured.
+
+Note: If you name your VLAN interfaces ethX.YYY, then there is no need to specify the vlan-raw-device, as the raw device can be retrieved from the interface name.
+
+Eg:
+
+auto eth0.222
+iface eth0.222 inet static
+        address 10.10.10.1/24
+        vlan-raw-device eth0
+
+}
+
+
