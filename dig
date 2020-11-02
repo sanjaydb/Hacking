@@ -1,0 +1,50 @@
+apt-get install dnsutils
+dig [server] [name] [type]
+1. To query domain “A” record
+{
+	dig trizeus.com
+}
+2. To query domain “A” record with +short
+{
+	dig trizeus.com +short
+}
+3. To remove comment lines.
+{
+	dig trizeus.com +nocomments
+}
+
+4. To set or clear all display flags.
+{
+	dig trizeus.com +noall
+}
+
+5. To query detailed answers.
+{
+	dig trizeus.com +noall +answer
+}
+
+6. To query all DNS record types.
+{
+	dig trizeus.com ANY
+}
+
+7. To query MX record for the domain.
+{
+	dig trizeus.com MX
+}
+
+8. To trace DNS path
+{
+	dig trizeus.com +trace
+}
+
+9. For specifying name servers
+{
+	dig trizeus.com @8.8.8.8
+}
+10. To query the statistics section
+{
+	dig trizeus.com +noall +answer +stats
+}
+
+
