@@ -1,2 +1,8 @@
+tools
 
 https://owasp.org/www-community/xss-filter-evasion-cheatsheet
+Burp Suite
+Nmap, sqlmap, wfuzz, arachnid
+
+Deliberately vulnerable web apps, such as Google Gruyere,
+Target Range, DAMN vulnerable web app, and others
