@@ -109,3 +109,20 @@ iface eth0.222 inet static
 }
 
 
+Folder share from virtualbox -> linux windows 10
+------------------------------------------------
+{
+    mount CDrom
+    sudo apt-get update
+    sudo apt-get install build-essential linux-headers-`uname -r`
+    cd /media/cdrom/
+    cp *.* /tmp/san
+    ./tmp/san/VBoxLinuxAdditions.run
+    sudo shutdown -r now
+    mkdir ~/shared
+    sudo mount -t vboxsf shared ~/shared
+    cd ~/shared
+    
+
+
+}
