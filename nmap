@@ -15,6 +15,8 @@ nmap
   # nmap --script nmap-vulners -sV 192.168.1.105 -p 21-80
 }
 
+ping -b -c 3 -i 20 192.168.0.255 -->  Broadcast ping
+
 Copy files here
 ----------------
 {
