@@ -1,0 +1,20 @@
+
+1. Understanding Kali Linux {
+
+Filee System {
+
+Regular Files : text files, images, binary files, etc , human readble file, executable file etc.
+
+Directories : / : root directory, /home is the defult loaction of the user home dir. /bin for essential user binaries , /boot static boot files etc.
+
+Special Files : real physical device such as printer for IO , You can see them in a file system as an ordinary directory or file.
+
+there are two types of special files for each device, i.e. character special files and block special files
+
+
+
+
+}
+
+
+}
