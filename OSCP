@@ -1,5 +1,80 @@
+0. Boothing Process : {
 
-1. Understanding Kali Linux {
+    Booting steps : {
+            Switching on power supply
+            Loading OS in to computers main memory
+            keeping all aplication in a state of reainess in case needed bu user
+    }
+
+    1. POST -> power on self test
+    2. BIOS -> basic IO System, its a firmware is oprated by battery , never sleep, its ROM { 
+        It Perfroms System integrity checks. Search loads and executes bootloader program.
+        It Searches boot loader in Disk Drive, SD Card reader, CD/DVD Rom, Hard Drive.
+        F12/F2 to change the boot sequence.
+        Give controles to Bootloader progarm , once fully loaded in memeory. In short BIOS load and execute MBR loader.
+        }
+    3. MBR -> 446 Boot code, 46 kb Partion table info , 2 kb magic number. {
+        Mastet Boot records.
+        It is located in first secotor of bootable disk. e.g /dev/hda or /dev/sda.
+        It is less than 512 Bytes in size
+        {
+            Primary boot loader info
+            partition table info
+            mbr validation check
+        }
+        It Contain information about Grub.
+        Inshort it load and execute GRUB boot loader.
+       }
+    4. GRUB -> Boot image , core image, ram image.
+    {
+        It is called as Grand unifed bootoader.
+        If we have multiple kernal , then we can select one , Kernal Img1m Kernal Img2 etc.
+        If waits for user inputs, if nohing is selcted it load default Kernel image. as specfied in grub configuration file.
+        It has the knowledge of file system, confiuration file : /boot/grub/grub.conf 
+        It load and executes kernal 
+    }
+    5. Kernal -> compress kernal is extracted , mount root jmp to systmd.
+    {
+        create tmp root file system , init rd
+        mounts root file system define in /boot/grub/grub.conf
+        the kernal executes init programs from /sbin/init folder
+        init is the first program to execute on the unix. "ps -efl greo init"
+        Kernal load the file system and the initial program.
+    6. (init rd)systemd -> now the services are started.
+    {
+        init rd -> initilize ram disk.
+        is used for mount tmp file system for root until kernal mount the real file system .
+        It decides the run level from /etc/inittab
+        Run level decides which program to run at startup
+        {
+            run levels :
+            0 - halt 
+            1 - single user mode
+            2 - multiuser, without NFS
+            3 - full multiuser mode
+            4 - unused
+            5 - x11
+            6 - reboot.
+        }
+    }
+    7. (runlevel)Target -> load GUI, Load termial as decided , Init mode.
+            Executes program for the current run level
+            directory for run levels
+            {
+                run level 0 - /etc/rc.d/rc0.d/
+                run level 1 - /etc/rc.d/rc1.d/
+                run level 2 - /etc/rc.d/rc2.d/
+                run level 3 - /etc/rc.d/rc3.d/
+                run level 4 - /etc/rc.d/rc4.d/
+                run level 5 - /etc/rc.d/rc5.d/
+                run level 6 - /etc/rc.d/rc6.d/
+                
+                program with 's' will get executed while startup.
+                { S12, s50, s80 -> where the program can be started or killed. }
+                program with 'k' kill will get executed while shutdown.
+  }
+    
+    1. Understanding Kali Linux {
 
 File System {
 #Regular Files : text files, images, binary files, etc , human readble file, executable file etc.
@@ -59,7 +134,79 @@ File System {
             4. Its is simlar to network stream/scokets and all the transations are local to filesystem.
          }
        }
-      }
+       File Represetation -> {
+        1. '.' -> Ordinary / Regular files
+        2. 'D' -> Directory
+        3. 'C' -> Charater special Files
+        4. 'B' -> Block Specal Files
+        5. 'L' -> Symbolic links Files
+        6. 'P' -> Name Piped files
+        7. 'S' -> Socket Files
+        
+        $file file-name
+        
+        Rules for naming files{
+            1. file name length should not be morer than 255 charters
+            2. files names are case sensitives
+            3. '"~!@#$%^&*(){}:"<>?" cannot be used in file name
+            4. if the file as trailing "." then it is called as hidden -> ls -la can be used to see this 
+            5. file can have same names in diffrent locations
+            
+        }
+        
+        Terms used in {
+            1. Root Directory{
+                1. its "/" directory
+                2. Top Most directory in hierarchey
+                3. It is the reference/starting point pf all the files, directory and sub-directory
+                4. It is represented as '/' symbol.
+                5. Absolute File Path , the path name that starts with the root directory "/"
+                6. Relative Path, with in the current dir / home dir. The path anme being with '..' is parent dir and '.' is current dir.
+               
+             }
+            2. Home Directory{
+                1. Its base directory or login directory provided to user
+                2. normally username is same a this directory name.
+                3. Reprository for user's personal files, directory and programs.
+                4. Every user has home directory
+                5. Enviournment variable '$HOME' stores the path of the home directory
+                6. it is represented as '~' symbol
+            }
+            
+            3. Current / Present Directory{
+                1. its a current working dir for the user
+                2. its is represented by '.' symbol
+            }
+            4. Parent Directory or previous directory {
+                1. Parent dir are the one level higher that the current dir
+                2. It is repesnted as '..' symbol
+        }
+        
+        Command used {
+            1. ls {
+                     -t : display last edited/ modofed files and directory
+                     -r : dipslay files and dir in desending order
+                     -R : List files and Dir and Sub-dir recursively in tree structure
+                     -a : list hidden files
+                     -v : Version file info
+                     -i : display inode
+                     -h : human readable file
+                     -l : {
+                            1. char :   type of file ( -,d,l,s)
+                            2. F1   :   Access mode
+                            3. F2   :   Number of links
+                            4. F3   :   Owner of file
+                            5. F4   :   Group of File
+                            6. F5   :   File size in bytes
+                            7. F6   :   Last modified date and time
+                            8. F7   :   Name of file
+                    }
+            2. cat > filrname->crtl+d ; cat >> file name ; cat file1 file2 > file3;
+            3. vi f1 f2
+            4. cat , vi , od, view , more, less
+        
+        }
+       }
  
       
 
