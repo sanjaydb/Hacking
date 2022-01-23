@@ -1,15 +1,45 @@
 
 1. Understanding Kali Linux {
 
-Filee System {
+File System {
+#Regular Files : text files, images, binary files, etc , human readble file, executable file etc.
+#Directories : / : root directory, /home is the defult loaction of the user home dir. /bin for essential user binaries , /boot static boot files etc.
+#Special Files : real physical device such as printer for IO , You can see them in a file system as an ordinary directory or file.
+#There are two types of special files for each device, i.e. character special files and block special files
+#Files is used for storing content, records or information.
+#Everything in Linux is file includeing USB, Tapes  any hardware device.
+#I/O is also considered as file.
+#Everything is file , if its ot file then its a process.
+#Unique inode number is given to every file in the file system.
+#File attributes are kept in a seprate location in the disk.
+#Types of file -> {
+    1. Regular/Ordinary File,
+    {
+       1. Just a regular file which contains Records or information 
+       2. They can be executables or conatins scripts which executes
+       3. Regular files are not directory or links.
+    }
+    2. Directory File ,
+    {
+      1. Contains other files or directory.
+      2. kernal creates directory files, kernal also makes an entery when a file is added or deleted
+      3. Directory file is  binary file, used to track and locate other files and directorys
+      4. Binary format is used so that drectoryies containing large numbers of files cab be search quickly
+      
+    }
+    3. Device or special File : 
+       { 
+         1. Raw or character Device Files, 
+         2. Block File, 
+         3. Name pipe.FIFO,
+         4. Link,
+         5. Socket 
+       }
+      }
+ 
+      
 
-Regular Files : text files, images, binary files, etc , human readble file, executable file etc.
 
-Directories : / : root directory, /home is the defult loaction of the user home dir. /bin for essential user binaries , /boot static boot files etc.
-
-Special Files : real physical device such as printer for IO , You can see them in a file system as an ordinary directory or file.
-
-there are two types of special files for each device, i.e. character special files and block special files
 
 
 
