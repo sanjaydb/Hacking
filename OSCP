@@ -8,6 +8,7 @@
 
     1. POST -> power on self test
     2. BIOS -> basic IO System, its a firmware is oprated by battery , never sleep, its ROM { 
+        Warm and clod booting
         It Perfroms System integrity checks. Search loads and executes bootloader program.
         It Searches boot loader in Disk Drive, SD Card reader, CD/DVD Rom, Hard Drive.
         F12/F2 to change the boot sequence.
