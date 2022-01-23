@@ -25,15 +25,39 @@ File System {
       2. kernal creates directory files, kernal also makes an entery when a file is added or deleted
       3. Directory file is  binary file, used to track and locate other files and directorys
       4. Binary format is used so that drectoryies containing large numbers of files cab be search quickly
-      
     }
     3. Device or special File : 
        { 
+         It Represent a physical Devices, They appear as odinary file. This type of files allows access to varios devices known to system. Hardware can be
+         Network card, USB, Printer, HDD , Scanner etc. When a process writes to a special file, the data is sent to the physical device associated with it.
+         these files are pointers to the device driver located in the kernal. you can confiugre the RWX bit here.
          1. Raw or character Device Files, 
-         2. Block File, 
-         3. Name pipe.FIFO,
-         4. Link,
-         5. Socket 
+         {
+            1. IO data is transfer one charater at a time when a charter special file is used.
+            2. This type of access is called raw devices access and located ib /DEV directory
+            3. IO is done serially.
+            4. Termials are classic example of char device files.
+            *5. All the read write oprations to them are direct, immedite and not cached
+         }
+         2. Block File{
+            1. When a block special file is used for IO, data s tranfered in large chunk size block.
+            2. Most of the files are present in /DEV dir.
+         }, 
+         3. Name pipe.FIFO{
+            1. First in First Out
+            2. Is a simpler forms of *nix inter-process communication 
+            3. E.g 2 process in *nix can connect to the I/O one be use as output and othoer can be used as input.
+         },
+         4. Link{
+            1. Use a referencing some other file of the filesystem.
+            2. They are either directory or regular files
+         },
+         5. Socket {
+            1. Pass information between applciation for communication purpose
+            2. socket() system call can be used.
+            3. For Advance InterProcess Communication - IPC(Inter-Process-Communication-Scoekt) scoks are used.
+            4. Its is simlar to network stream/scokets and all the transations are local to filesystem.
+         }
        }
       }
  
