@@ -1,0 +1,16 @@
+
+Port 110, 995
+
+commands
+{
+USER    Username or mailbox.
+PASS    Server/mailbox-specific password.
+STAT    Number of messages in the mailbox.
+LIST    [ message# ] Messages summary.
+RETR    [ message# ] Retrieve selected message.
+DELE    [ message# ] Delete selected message.
+RSET    Reset the session. Undelete deleted messages.
+NOOP    No-op. Keeps connection open.
+QUIT    End session.
+}
+
