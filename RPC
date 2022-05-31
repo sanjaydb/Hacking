@@ -16,20 +16,26 @@ Query RPC
 #rpcclient -U "" -N 192.168.1.31
 
 
-Command	Interface		Description
-queryuser	SAMR		Retrieve user information.
-querygroup	SAMR		Retrieve group information.
-querydominfo	SAMR		Retrieve domain information.
-enumdomusers	SAMR		Enumerate domain users.
-enumdomgroups	SAMR		Enumerate domain groups.
-createdomuser	SAMR		Create a domain user.
-deletedomuser	SAMR		Delete a domain user.
-lookupnames	LSARPC		Look up usernames to SID values.
-lookupsids	LSARPC		Look up SIDs to usernames (RID cycling).
-lsaaddacctrights	LSARPC		Add rights to a user account.
-lsaremoveacctrights		LSARPC	Remove rights from a user account.
-dsroledominfo	LSARPC-DS	Get primary domain information.
-dsenumdomtrusts	LSARPC-DS	Enumerate trusted domains within an AD fores
+Command	          Interface		      Description
+queryuser	            SAMR		      Retrieve user information.
+querygroup	          SAMR		      Retrieve group information.
+querydominfo	        SAMR		      Retrieve domain information.
+enumdomusers	        SAMR		      Enumerate domain users.
+enumdomgroups	        SAMR		      Enumerate domain groups.
+createdomuser	        SAMR		      Create a domain user.
+deletedomuser	        SAMR		      Delete a domain user.
+lookupnames	          LSARPC		    Look up usernames to SID values.
+lookupsids	          LSARPC		    Look up SIDs to usernames (RID cycling).
+lsaaddacctrights	    LSARPC		    Add rights to a user account.
+lsaremoveacctrights		LSARPC	      Remove rights from a user account.
+dsroledominfo	        LSARPC-DS	    Get primary domain information.
+dsenumdomtrusts	      LSARPC-DS	    Enumerate trusted domains within an AD fores
 
 \pipe\lsarpc -> LSA interface, used to enumerate users.
 \pipe\lsarpc -> LSA Directory Services (DS) interface, used to enumerate domains and trust relationships.
+\pipe\samr -> LSA SAMR interface, used to access public SAM database elements (e.g., usernames) and brute-force user passwords regardless of account lockout policy.
+\pipe\atsvc -> Task scheduler, used to remotely execute commands.
+\pipe\winreg -> Remote registry service, used to access and modify the system registry.
+\pipe\svcctl -> Service control manager and server services, used to remotely start and stop services and execute commands.
+\pipe\srvsvc ->Service control manager and server services, used to remotely start and stop services and execute commands.
+\pipe\epmapper ->  DCOM interface, used for brute-force password grinding and information gathering via WM.
