@@ -12,6 +12,21 @@ Hacking SMTP
   The message should be accepted for delivery.
 }
 
+commands
+{
+
+HELO        Identify to the SMTP server.
+EHLO        Alternative HELO for Extended SMTP protocol.
+MAIL FROM:  Sender's email address.
+RCPT TO:    Recipient's email address.
+DATA        Initiate message content transfer. Command is terminated with a line containing only a .
+RSET        Reset the session. Connection will not be closed.
+VRFY        Verify username or mailbox.
+NOOP        No-op. Keeps connection open.
+QUIT        Ends session
+}
+
+
 msf
 ---
 {
