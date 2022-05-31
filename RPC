@@ -1,0 +1,35 @@
+Port -> 135 & 1028 -> UDP -> Process(RPC stub)
+Port ->139 & 445 -> (SMB IPC$) -> Name Pipes -> Process(RPC stub)
+Port -> 80 (MS IIS) -> (HTTP)  -> Name Pipes -> Process(RPC stub)
+
+DLL : rpccrt4.dll
+
+Enumartion : 
+Dump list of RPC endpoints
+#rpcdump.py 192.1681.1.31
+
+List system useraccounts,share,sensitive information through SAMR( Security Account Manager Remote) interface
+#samrdump.py 192.168.1.31
+#nmap -sV -script msrpc-enum -Pn 10.0.0.3
+
+Query RPC
+#rpcclient -U "" -N 192.168.1.31
+
+
+Command	Interface		Description
+queryuser	SAMR		Retrieve user information.
+querygroup	SAMR		Retrieve group information.
+querydominfo	SAMR		Retrieve domain information.
+enumdomusers	SAMR		Enumerate domain users.
+enumdomgroups	SAMR		Enumerate domain groups.
+createdomuser	SAMR		Create a domain user.
+deletedomuser	SAMR		Delete a domain user.
+lookupnames	LSARPC		Look up usernames to SID values.
+lookupsids	LSARPC		Look up SIDs to usernames (RID cycling).
+lsaaddacctrights	LSARPC		Add rights to a user account.
+lsaremoveacctrights		LSARPC	Remove rights from a user account.
+dsroledominfo	LSARPC-DS	Get primary domain information.
+dsenumdomtrusts	LSARPC-DS	Enumerate trusted domains within an AD fores
+
+\pipe\lsarpc -> LSA interface, used to enumerate users.
+\pipe\lsarpc -> LSA Directory Services (DS) interface, used to enumerate domains and trust relationships.
