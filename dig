@@ -52,3 +52,5 @@ Information Gathering
 ----------------------'
 #whatweb www.google.com
 #theHarvester -d google.com -b all
+#theHarvester -d google.com -b twitter
+#sherlock username
