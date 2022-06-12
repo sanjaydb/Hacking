@@ -48,3 +48,7 @@ dig [server] [name] [type]
 }
 
 
+Information Gathering
+----------------------'
+#whatweb www.google.com
+#theHarvester -d google.com -b all
