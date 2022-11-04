@@ -1,0 +1,67 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <regex.h>
+
+
+#define BUFSIZE 128
+
+
+
+int SearchString(char *string)
+{
+   regex_t    preg;
+   //char       *pattern = "\\(sanjay[a-z]le\\) \\1";
+   char 	*pattern = "open";
+   int        rc;
+   size_t     nmatch = 2;
+   regmatch_t pmatch[2];
+
+
+   if (0 != (rc = regcomp(&preg, pattern, 0))) {
+      printf("regcomp() failed, returning nonzero (%d)\n", rc);
+      exit(EXIT_FAILURE);
+   }
+ 
+   if (0 != (rc = regexec(&preg, string, nmatch, pmatch, 0))) {
+     printf(".");
+   }
+   else {
+       //      pmatch[0].rm_so, pmatch[0].rm_eo - 1);
+        //     pmatch[1].rm_eo - pmatch[1].rm_so, &string[pmatch[1].rm_so],
+   
+   	printf("\n%s",string);
+   }
+   regfree(&preg);
+   return 0;
+ }  
+   
+int parse_output(void) {
+    char *cmd = "nmap -sS -v 192.168.1.188 ";    
+    
+    char buf[BUFSIZE];
+    FILE *fp;
+
+    if ((fp = popen(cmd, "r")) == NULL) {
+        printf("Error opening pipe!\n");
+        return -1;
+    }
+
+    while (fgets(buf, BUFSIZE, fp) != NULL) {
+        
+	SearchString(buf);	    
+    }
+
+    if (pclose(fp)) {
+        printf("Command not found or exited with error status\n");
+        return -1;
+    }
+
+    return 0;
+}
+
+int main()
+{
+	parse_output();
+
+return 0;
+}
