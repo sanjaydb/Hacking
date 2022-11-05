@@ -1,0 +1,76 @@
+
+1.__OS Information 
+//--------------
+{
+  
+// OS information is displayed.
+        # uname -a 
+        {
+          -> Linux kali 5.19.0-kali2-amd64 #1 SMP PREEMPT_DYNAMIC Debian 5.19.11-1kali2 (2022-10-10) x86_64 GNU/Linux
+        }
+
+//arch - print machine hardware name (same as uname -m)
+        # arch 
+        {
+          -> x86_64  
+        }
+        
+//Print machine Architecture
+        # dpkg --print-architecture
+        {
+          -> amd64
+        }
+        
+}
+
+2.__User Related commands 
+//-----------------------
+{
+
+// Print login user information
+        # id
+        {
+          -> uid=0(root) gid=0(root) groups=0(root)
+        }
+        
+        #id -nG kali 
+        {
+          ->
+        }
+        
+// Adding user to sudo group
+        # adduser sanjay || useradd sanjay { passwd sanjay }
+        # usermod -a -G sudo sanjay
+        # chsh -s /bin/bash sanjay   <- adding shell to sanjay
+        
+        # userdel sanjay <- to delete user,sudo user ; 
+        # getent group <- display all groups ;
+        # getent group sudo   <- display all users in sudo group ;
+
+        # /etc/passwd <- users's group is stored here 
+        # /etc/group 
+        # less /etc/group <- List all group 
+
+
+        # groups  <- will print a list of all groups the currently logged in user belongs to
+        # groups aquasan21 <- To get a list of all groups a specific user belongs to
+        # id aquasan21 <- display  user ID (uid), user’s primary group (gid), the user’s secondary groups (groups) 
+         {
+          uid=1001(linuxize) gid=1001(linuxize) groups=1001(linuxize),27(sudo)
+        }
+
+        # id -nG
+        {
+
+        }
+
+        # getent group  <- To list all members of a group
+        # getent group dev<- to find out the members of a group with the name
+        # getent group | awk -F: '{ print $1}'
+        # getent group | cut -d: -f1
+
+}
+
+
+
+3.__
