@@ -1,0 +1,17 @@
+
+Bash shell's startup script add varibales in 
+"~/.bashrc" (or "~/.bash_profile", or "~/.profile")
+
+System Wide change 
+add varibale in "/etc/profile" 
+
+Set global varibale 
+# "export varname=value", which sets the variable and exports it to the global environment (available to other processes).
+
+Set Path
+# export PATH=/path/to/dir:$PATH
+
+Refresh the bash shell
+# source ~/.bashrc || ~/.bash_profile || ~/.profile|| /etc/profile
+
+
