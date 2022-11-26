@@ -7,16 +7,18 @@
         # userdel aquasan21 <- once not required
         
 0- Change command prompt 
-        # hostname -I | awk '{print $1}'
-        # fconfig | grep 'eth0' -A 1 | tail -1 |  sed 's/.............//' | cut -d " " -f1
+        //# hostname -I | awk '{print $1}'
+        //# fconfig | grep 'eth0' -A 1 | tail -1 |  sed 's/.............//' | cut -d " " -f1
         
-        # export PS1='$(whoami)@$(hostname):$(pwd)'
+        //# export PS1='$(whoami)@$(hostname):$(pwd)'
         
-        #XIP = (hostname -I | awk { printf $1 } )
-        # export PS1="$(whoami)@$($XIP):$(pwd) > "
+        //#XIP = (hostname -I | awk { printf $1 } )
+        //#export PS1="$(whoami)@$($XIP):$(pwd) > "
         
-        export san=ifconfig | grep 'eth0' -A 1 | grep -o '[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}' | tail -1
+        //export san=ifconfig | grep 'eth0' -A 1 | grep -o '[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}' | tail -1
         
+        p="$(ifconfig |grep inet | grep -o '[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}' | head -1 2>&1)"
+        export PS1='[$(whoami)@$(echo $p):$(pwd)]# '
        
         
 0-  To Save time for exam try to login as root, to save some time, no sudo <- typing 
