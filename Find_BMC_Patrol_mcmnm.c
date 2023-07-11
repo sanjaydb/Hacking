@@ -1,5 +1,6 @@
+
 //  CVE-2017-13130 - BMC Patrol 'mcmnm' - Privilege Escalation via a Vulnerable SUID Binary
-// Find SUID with strace for "." 
+//
 #include <stdio.h>
 #include <stdlib.h>
 #include <dirent.h>
@@ -97,5 +98,5 @@ int main(int argc, char* argv[]) {
 
     return 0;
 
-
+}
 
